@@ -5,6 +5,7 @@ BuzzHub is an app for coffee drinkers to check in and rate their favorite bevera
 As a user, in order to keep track of coffee drinks enjoyed, I want to add my beverage and rate it. 
 
 ##Criteria
+
 1. User selects their drink from the dropdown menu.
 2. User rates drink on scale of 1 to 5. 
 3. If drink is not available, the user selects "Don't see your drink?" and adds a new drink that is saved to that venue. 
