@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="buzzHub">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <title>Buzz Hub</title>
 </head>
 <body>
-<form action="#" method="GET" id="searchform">
-    <input type="text" name="query" id="query" value="Coffee Search">
-    <input type="submit" name="submit" id="submit" value="Submit">
-</form>
-<ul id="list">
-  <div id="venues"></div>
+<div class="container" class="container-fluid" .col-xs-5>
+  <h1>Buzz Hub</h1>
+   <a class="btn btn-success" href="/#/login" ng-hide="user">Login</a> 
+    <input type="submit" name="submit" id="query" value="Find Coffee">
+  <h2>Coffee Shops Near You</h2>
+    <ul id="list">
 </ul>
+</div>
+<script src="bower_components/firebase/firebase.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/data.js"></script>
 </body>
 </html>
