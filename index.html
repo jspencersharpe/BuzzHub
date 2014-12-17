@@ -8,8 +8,9 @@
 <body>
 <div class="container" class="container-fluid" .col-xs-5>
   <h1>Buzz Hub</h1>
+    <a class="btn btn-primary" href="/#/mydrinks" ng-show="user">My Drinks</a>
    <a class="btn btn-success" href="/#/login" ng-hide="user">Login</a> 
-   <div ng-view></div>
+      <div ng-view></div>
     <input type="submit" name="submit" id="query" value="Find Coffee">
   <h2>Coffee Shops Near You</h2>
     <ul id="list">
@@ -19,12 +20,17 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+
 <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+<script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+
 <script src="js/main.js"></script>
 <script src="js/data.js"></script>
 <script src="js/constants.js"></script>
 <script src="js/config.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/factory.js"></script>
+<script src="js/routes.js"></script>
 </body>
 </html>

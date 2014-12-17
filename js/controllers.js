@@ -1,7 +1,7 @@
 ;(function(){
-  'use strict';
+  //'use strict';
 
-  angular.module('buzzHub', [])
+  angular.module('buzzHub')
       .controller('ChangePasswordController', function($scope, $location, authFactory){
         var vm = this;
         vm.changePassword = function(){

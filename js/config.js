@@ -1,7 +1,7 @@
 ;(function(){
   'use strict';
 
-  angular.module('buzzHub', [])
+  angular.module('buzzHub')
     .config(function($routeProvider){
       $routeProvider
       .when('/', {
