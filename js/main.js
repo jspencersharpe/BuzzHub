@@ -46,21 +46,10 @@
 
 
 
-    .controller('LoginController', function(authFactory, $scope, $location){
-      var vm = this;
-
-      vm.login = function(){
-        authFactory.login(vm.email, vm.password, function(){
-          $location.path('/findshops')
-          $scope.$apply();
-        });
-      }
-      
-    })
 
 
 
-
+/*
   var ref = new Firebase('https://buzzhub.firebaseio.com/');
   ref.createUser({
   email    : "bobtony@firebase.com",
@@ -74,3 +63,4 @@
 });
 
 }());
+*/
