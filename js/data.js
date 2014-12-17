@@ -6,7 +6,10 @@ if (window.navigator.geolocation) {
            lat = position.coords.latitude;
            lng = position.coords.longitude;
       console.log(position.coords.latitude, position.coords.longitude);
-      var fsq = "https://api.foursquare.com/v2/venues/explore?ll="+lat+","+lng+"&client_id=GNPQME4WJXXAHQIRSIMCVLOOLS05DXJWYJZD3GESHMQX2NVO&client_secret=VKZOUFXSD4M5CF3UH1E4M0RL2YQL111HTCZH1DD0S5T5FQ3I&v=20130619&query="+$("#query").val()+""; 
+      var fsq = "https://api.foursquare.com/v2/venues/explore?ll="+lat+","+lng+"&client_id=GNPQME4WJXXAHQIRSIMCVLOOLS05DXJWYJZD3GESHMQX2NVO&client_secret=VKZOUFXSD4M5CF3UH1E4M0RL2YQL111HTCZH1DD0S5T5FQ3I&v=20130619&query=coffee"; 
+
+      //var fsq = "https://api.foursquare.com/v2/venues/search?client_id=GNPQME4WJXXAHQIRSIMCVLOOLS05DXJWYJZD3GESHMQX2NVO&client_secret=VKZOUFXSD4M5CF3UH1E4M0RL2YQL111HTCZH1DD0S5T5FQ3I&v=20130815&ll="+lat+","+lng+"&query=coffee";
+
       getData(fsq);
       };
     failure = function(message) {
@@ -29,9 +32,9 @@ $.getJSON(fsq, function( data ) {
   });
  
   $( "<ul/>", {
-    "class": "my-new-list",
+    "class": "shops-found",
     html: items.join( "" )
-  }).appendTo( "body" );
+  }).appendTo( "div.container" );
   });
 }
 
