@@ -5,7 +5,7 @@
       .controller('ChangePasswordController', function($scope, $location, authFactory){
         var vm = this;
         vm.changePassword = function(){
-          authFactory.changePassword(vm.oldPassword, function(){
+          authFactory.changePassword(vm.oldPassword, vm.newPassword, function(){
             $location.path('/logout');
             $scope.$apply();
           })
@@ -34,8 +34,9 @@
       .controller('LogoutController', function($scope, $location, authFactory){
         authFactory.logout(function(){
           $location.path('/login');
-          $scope.$apply('/login');
+          $scope.$apply();
         });
       })
 
 }());
+
