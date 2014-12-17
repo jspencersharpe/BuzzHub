@@ -2,6 +2,22 @@
   'use strict';
 
   angular.module('buzzHub', [])
+    
+    .config(function($routeProvider) {
+      $routeProvider
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginController',
+        controllerAs: 'login',
+        resolve: {
+          data:function(authFactory) {
+            authFactory.disallowLogin();
+          }
+        }
+      })
+    }
+
+
     .factory('authFactory', function($routeScope, $location, FIREBASE_URL){
       var factory = {}
       ref = new Firebase(FIREBASE_URL);
