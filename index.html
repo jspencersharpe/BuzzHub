@@ -15,22 +15,38 @@
    <a class="btn btn-warning" href="/#/changepassword" ng-show="user">Change Password</a>
    <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
       <div ng-view></div>
-    <input type="submit" name="submit" id="query" value="Coffee">
   <h2>Coffee Shops Near You</h2>
+  <div class="shops-list"></div>
+  <div class="form-options">
+    <h2>Average Rating</h2>
+    <ul class="rating">
+      <li class="rating-value"></li>
+    </ul>
+    <div class='movie_choice'>
+      <h2>How was it?</h2>
+    <div id="r1" class="rate_widget">
+        <div class="star_1 ratings_stars">&#9734;</div>
+        <div class="star_2 ratings_stars">&#9734;</div>
+        <div class="star_3 ratings_stars">&#9734;</div>
+        <div class="star_4 ratings_stars">&#9734;</div>
+        <div class="star_5 ratings_stars">&#9734;</div>
+        <div class="total_votes">vote data</div>
+    </div>
+</div>
+  </div>
 </div>
 <script src="bower_components/firebase/firebase.js"></script>
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
-
 <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
 <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
-
 <script src="js/main.js"></script>
 <script src="js/data.js"></script>
 <script src="js/constants.js"></script>
 <script src="js/config.js"></script>
+<script src="js/style.js"></script>
 <script src="js/auth/auth.controllers.js"></script>
 <script src="js/auth/auth.factory.js"></script>
 <script src="js/auth/auth.routes.js"></script>

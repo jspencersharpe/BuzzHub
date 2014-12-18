@@ -4,3 +4,21 @@ ul.shops-found {
   overflow: auto;
   list-style-type: none;
 }
+
+.rate_widget {
+    border:     1px solid #CCC;
+    overflow:   visible;
+    padding:    10px;
+    position:   relative;
+    width:      180px;
+    height:     32px;
+}
+.ratings_stars {
+    float:      left;
+    height:     28px;
+}
+
+.highlight {
+  color: rgb(252, 203, 0);
+
+}

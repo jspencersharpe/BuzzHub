@@ -34,7 +34,7 @@ $.getJSON(fsq, function( data ) {
   $( "<ul/>", {
     "class": "shops-found",
     html: items.join( "" )
-  }).appendTo( "div.container" );
+  }).appendTo( "div.shops-list" );
   });
 }
 
