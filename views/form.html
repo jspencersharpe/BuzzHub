@@ -1,0 +1,26 @@
+<form name="myForm" ng-submit="myForm.$valid && coffee.addNewDrink()" validate>
+  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.name}" required>
+    <label for="">Drink</label>
+    <select ng-model="coffee.newDrink.menu">
+      <option value="{{val}}" ng-repeat="(val, text) in coffee.menuOptions">
+      {{text}}
+      </option>
+    </select>    
+  </div>
+  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.shop}">
+    <label>Shop</label>
+    <input class="form-control" type="text" ng-model="coffee.newDrink.shop">
+  </div>
+  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.rating}">
+    <label>Rating</label>
+    <select ng-model="coffee.newDrink.rating">
+      <option value="{{val}}" ng-repeat="(val, text) in coffee.ratingOptions">
+      {{text}}
+      </option>
+  </div>
+  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.date}">
+    <label class="control-label">Date</label>
+    <input class="form-control" type="text" ng-model="coffee.newDrink.date" bs-datepicker required>
+  </div>
+  <input type="submit" value="Add Drink" ng-disabled="myForm.$invalid">
+</form>
