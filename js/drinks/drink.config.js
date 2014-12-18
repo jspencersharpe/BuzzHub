@@ -6,11 +6,11 @@
       $routeProvider
       .when('/drinks', {
         templateUrl: 'views/table.html',
-        controller: 'DrinkController',
-        controllerAs: 'drink',
+        controller: 'CoffeeController',
+        controllerAs: 'coffee',
         private: true
       })
-      .when('/drinks/new' {
+      .when('/drinks/new', {
         templateUrl: 'views/form.html',
         controller: 'CoffeeController',
         controllerAs: 'coffee',
@@ -20,7 +20,7 @@
         templateUrl: 'views/show.html',
         controller: 'ShowController',
         controllerAs: 'show',
-        private: true;
+        private: true
       })
       .when('/drinks/:id/edit', {
         templateUrl: 'views/form.html',

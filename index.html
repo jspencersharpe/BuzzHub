@@ -9,8 +9,8 @@
 <body>
 <div class="container" class="container-fluid" .col-xs-2>
   <h1>Buzz Hub</h1>
-    <a class="btn btn-primary" href="/#/mydrinks" ng-show="user">My Drinks</a>
-    <a class="btn btn-primary" href="/#/mydrinks/new" ng-show="user">New Drink</a>
+    <a class="btn btn-primary" href="/#/drinks" ng-show="user">My Drinks</a>
+    <a class="btn btn-primary" href="/#/drinks/new" ng-show="user">New Drink</a>
    <a class="btn btn-success" href="/#/login" ng-hide="user">Login</a> 
    <a class="btn btn-warning" href="/#/changepassword" ng-show="user">Change Password</a>
    <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
@@ -56,5 +56,8 @@
 <script src="js/auth/auth.controllers.js"></script>
 <script src="js/auth/auth.factory.js"></script>
 <script src="js/auth/auth.routes.js"></script>
+<script src="js/drinks/drink.config.js"></script>
+<script src="js/drinks/drink.controllers.js"></script>
+<script src="js/drinks/drink.factory.js"></script>
 </body>
 </html>
