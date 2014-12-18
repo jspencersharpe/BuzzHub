@@ -28,13 +28,24 @@ $.getJSON(fsq, function( data ) {
     var items = [];
     $.each( data, function( key) {
     var stores = (data[key].venue.name)
-    items.push( "<li id='" + "'>" + stores + "</li>" );
+    items.push( "<li id= " + stores + ">" + stores + "</li>" );
+        
+   /* $('ul.shops-found li').bind( "click", function(event){
+      var shopName = this.id;
+      $("h1.current-shop").text(shopName);
+    })*/
   });
  
   $( "<ul/>", {
     "class": "shops-found",
     html: items.join( "" )
   }).appendTo( "div.shops-list" );
+    $('h1').text = ("");
+    $('li').click(function(){
+      var shop = this.textContent
+      $('h1.current-shop').html(this);
+    })
+
   });
 }
 

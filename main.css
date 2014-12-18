@@ -1,9 +1,12 @@
 ul.shops-found {
-  width: 250px;
+  width: 325px;
   height: 300px;
   overflow: auto;
-  list-style-type: none;
   font-size: 22px;
+}
+
+li {
+  list-style-type: none;
 }
 
 .rate_widget {
