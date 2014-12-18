@@ -1,0 +1,9 @@
+{
+  "firebase": "buzzhub",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
