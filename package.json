@@ -1,0 +1,24 @@
+{
+  "name": "BuzzHub",
+  "version": "1.0.0",
+  "description": "BuzzHub =======",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "s3-cli sync --delete-removed -P . s3://buzzhub.spencersharpe.com/",
+    "server": "python -m SimpleHTTPServer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jspencersharpe/BuzzHub.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jspencersharpe/BuzzHub/issues"
+  },
+  "homepage": "https://github.com/jspencersharpe/BuzzHub"
+}

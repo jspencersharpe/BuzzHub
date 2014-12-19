@@ -1,4 +1,18 @@
+  <div class="row">  
+      <h2>Coffee Shops Near You</h2>
+   <div class="col-md-4">
+    <div class="shops-list" ng-click=""></div>
+  </div>
+  <div class="col-md-6">
+  <div class="form-options">
+    </div>
+    </div>
+  <div class="col-md-4">
 <form name="myForm" ng-submit="myForm.$valid && coffee.addNewDrink()" validate>
+    <div class="form-group" ng-class="{'has-error': !coffee.newDrink.shop}">
+    <label>Shop</label>
+    <h1 class="current-shop" ng-model="coffee.newDrink.shop"></h1>
+  </div>
   <div class="form-group" ng-class="{'has-error': !coffee.newDrink.name}" required>
     <label for="">Drink</label>
     <select ng-model="coffee.newDrink.menu">
@@ -6,10 +20,6 @@
       {{text}}
       </option>
     </select>    
-  </div>
-  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.shop}">
-    <label>Shop</label>
-    <input class="form-control" type="text" ng-model="coffee.newDrink.shop">
   </div>
   <div class="form-group" ng-class="{'has-error': !coffee.newDrink.rating}">
     <label>Rating</label>
@@ -24,3 +34,5 @@
   </div>
   <input type="submit" value="Add Drink" ng-disabled="myForm.$invalid">
 </form>
+</div>
+</div>

@@ -23,6 +23,9 @@
 
       vm.menuOptions = coffeeFactory.menuOptions;
 
+      vm.ratingOptions = coffeeFactory.ratingOptions;
+
+
     })
     .controller('CoffeeController', function(coffeeFactory){
        var vm = this;
@@ -49,9 +52,12 @@
 
       vm.menuOptions = coffeeFactory.menuOptions;
 
+      vm.ratingOptions = coffeeFactory.ratingOptions;
+
       function _freshDrink(){
         return {
-          menu: 'coffee'
+          menu: 'coffee',
+          rating: 'oneStar'
         };
       }
 

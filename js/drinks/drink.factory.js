@@ -73,13 +73,22 @@
         other: 'other'
       };
 
+      var ratingOptions = {
+        oneStar: '&#9734;',
+        twoStar: '&#9734;' + '&#9734;',
+        threeStar: '&#9734;' + '&#9734;' + '&#9734;',
+        fourStar: '&#9734;' + '&#9734;' + '&#9734;' + '&#9734;',
+        fiveStar: '&#9734;' + '&#9734;' + '&#9734;' + '&#9734;' + '&#9734;'
+      };
+
       return {
         getCoffee: getCoffee,
         editCoffee: editCoffee,
         getAllDrinks: getAllDrinks,
         createCoffee: createCoffee,
         deleteCoffee: deleteCoffee,
-        menuOptions: menuOptions
+        menuOptions: menuOptions,
+        ratingOptions: ratingOptions
       };
     })
 }());
