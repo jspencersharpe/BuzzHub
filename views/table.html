@@ -14,10 +14,10 @@
       <td>{{drink.rating}}</td>
       <td>{{drink.date | date}}</td>
       <td>
-        <a class="btn btn-primary" href="/#/todos/{{drinkId}}">Show</a>
-        <a class="btn btn-primary" href="/#/todos/{{drinkId}}/edit">Show</a>
-      </td>
-      <button ng-click="coffee.removeDrink(drinkId)">Delete</button>
+        <a class="btn btn-primary" href="/#/drinks/{{drinkId}}">Show</a>
+        <a class="btn btn-primary" href="/#/drinks/{{drinkId}}/edit">Edit</a>
+      <button ng-click="coffee.removeCoffee(drinkId)">Delete</button>
+    </td>
     </tr>
   </tbody>
 </table>

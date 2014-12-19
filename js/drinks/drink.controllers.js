@@ -2,11 +2,11 @@
   'use strict';
 
   angular.module('buzzHub')
-    .controller('ShowController', function($routeParams, todoFactory){
+    .controller('ShowController', function($routeParams, coffeeFactory){
       var vm = this;
       var id = $routeParams.id;
       coffeeFactory.getCoffee(id, function(data){
-        vm.task = data;
+        vm.drink = data;
       });
     })
     .controller('EditController', function($routeParams, coffeeFactory){
