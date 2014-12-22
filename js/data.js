@@ -1,3 +1,7 @@
+;(function(){
+
+  angular.module('buzzHub')
+
 var lat, lng;
 
 if (window.navigator.geolocation) {
@@ -7,8 +11,6 @@ if (window.navigator.geolocation) {
            lng = position.coords.longitude;
       console.log(position.coords.latitude, position.coords.longitude);
       var fsq = "https://api.foursquare.com/v2/venues/explore?ll="+lat+","+lng+"&client_id=GNPQME4WJXXAHQIRSIMCVLOOLS05DXJWYJZD3GESHMQX2NVO&client_secret=VKZOUFXSD4M5CF3UH1E4M0RL2YQL111HTCZH1DD0S5T5FQ3I&v=20130619&query=coffee"; 
-
-      //var fsq = "https://api.foursquare.com/v2/venues/search?client_id=GNPQME4WJXXAHQIRSIMCVLOOLS05DXJWYJZD3GESHMQX2NVO&client_secret=VKZOUFXSD4M5CF3UH1E4M0RL2YQL111HTCZH1DD0S5T5FQ3I&v=20130815&ll="+lat+","+lng+"&query=coffee";
 
       getData(fsq);
       };
@@ -29,26 +31,20 @@ $.getJSON(fsq, function( data ) {
     $.each( data, function( key) {
     var stores = (data[key].venue.name)
     items.push( "<li id= " + stores + ">" + stores + "</li>" );
-        
-   /* $('ul.shops-found li').bind( "click", function(event){
-      var shopName = this.id;
-      $("h1.current-shop").text(shopName);
-    })*/
   });
  
   $( "<ul/>", {
     "class": "shops-found",
     html: items.join( "" )
   }).appendTo( "div.shops-list" );
-    $('h1').text = ("");
-    $('li').click(function(){
-      var shop = this.textContent
-      $('h1.current-shop').html(this);
+    $( 'li' ).click(function() {
+      var shop = $( this ).text();
+      $( "#current-shop" ).val( this.innerHTML );
     })
 
   });
 }
-
+}());
 
 
 

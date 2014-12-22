@@ -25,7 +25,6 @@
 
       vm.ratingOptions = coffeeFactory.ratingOptions;
 
-
     })
     .controller('CoffeeController', function(coffeeFactory){
        var vm = this;
