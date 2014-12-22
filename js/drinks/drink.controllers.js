@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('buzzHub')
-    .controller('ShowController', function($routeParams, coffeeFactory){
+    .controller('ShowController', function($routeParams, coffeeFactory, dataFactory){
       var vm = this;
       var id = $routeParams.id;
       coffeeFactory.getCoffee(id, function(data){
@@ -26,8 +26,13 @@
       vm.ratingOptions = coffeeFactory.ratingOptions;
 
     })
-    .controller('CoffeeController', function(coffeeFactory){
+    .controller('CoffeeController', function(coffeeFactory, dataFactory, $scope){
        var vm = this;
+      
+        dataFactory.getData(function(items){
+        vm.items = _.uniq(items);
+        $scope.$digest();
+      })
 
       coffeeFactory.getAllDrinks(function(data){
         vm.drinks = data;
@@ -55,7 +60,7 @@
 
       function _freshDrink(){
         return {
-          menu: 'coffee',
+          drink: 'coffee',
           rating: 'oneStar'
         };
       }
