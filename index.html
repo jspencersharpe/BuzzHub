@@ -2,19 +2,30 @@
 <html lang="en" ng-app="buzzHub">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
+
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <title>Buzz Hub</title>
 </head>
 <body>
+<div class="jumbotron">
 <div class="container" class="container-fluid" .col-xs-2>
-  <h1>Buzz Hub</h1>
-    <a class="btn btn-primary" href="/#/drinks" ng-show="user">My Drinks</a>
+   <h1>Buzz Hub
+   <img id="logo" src="doc/coffee.png" alt="coffee mug">   
+   </h1>
+  <div class="buttons">
+    <a class="btn btn-primary navbar-btn" href="/#/drinks" ng-show="user">My Drinks</a>
     <a id="new-drink" class="btn btn-primary" href="/#/drinks/new" ng-show="user">New Drink</a>
    <a class="btn btn-success" href="/#/login" ng-hide="user">Login</a> 
    <a class="btn btn-warning" href="/#/changepassword" ng-show="user">Change Password</a>
    <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
+ </div>
       <div ng-view></div>
+</div>
 </div>
 <script src="bower_components/firebase/firebase.js"></script>
 <script src="bower_components/lodash/dist/lodash.min.js"></script>
@@ -37,3 +48,5 @@
 <script src="js/drinks/drink.factory.js"></script>
 </body>
 </html>
+
+

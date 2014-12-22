@@ -1,6 +1,6 @@
   <div class="row">  
       <h2>Coffee Shops Near You</h2>
-   <div class="col-md-4">
+   <div class="col-md-5">
     <div class="shops-list">
       <ul>
         <li ng-repeat="item in coffee.items" ng-click="coffee.newDrink.shop=item">{{item}}</li>
@@ -12,7 +12,7 @@
     </div>
     </div>
   <div class="col-md-4">
-<form name="myForm" ng-submit="myForm.$valid && coffee.addNewDrink()" validate>
+<form class="new-drink" name="myForm" ng-submit="myForm.$valid && coffee.addNewDrink()" validate>
   <div class="form-group" ng-class="{'has-error': !coffee.newDrink.shop}" required>
     <label class="control-label">Shop</label>
     <input class="form-control" id="current-shop" type="text" ng-model="coffee.newDrink.shop">
