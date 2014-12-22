@@ -9,7 +9,7 @@
         vm.drink = data;
       });
     })
-    .controller('EditController', function($routeParams, coffeeFactory){
+    .controller('EditController', function($routeParams, dataFactory, coffeeFactory){
       var vm = this;
       var id = $routeParams.id;
 
