@@ -73,13 +73,22 @@
         other: 'other'
       };
 
-      var ratingOptions = {
+      var ratingOptions = [
+          '',
+          '\u2606', 
+          '\u2606'+'\u2606', 
+          '\u2606'+'\u2606'+'\u2606', 
+          '\u2606'+'\u2606'+'\u2606'+'\u2606', 
+          '\u2606'+'\u2606'+'\u2606'+'\u2606'+'\u2606' 
+            ];
+      
+      /*var ratingOptions = {
         oneStar: '\u2606',
         twoStar: '\u2606' + '\u2606',
         threeStar: '\u2606' + '\u2606' + '\u2606',
         fourStar: '\u2606' + '\u2606' + '\u2606' + '\u2606',
         fiveStar: '\u2606' + '\u2606' + '\u2606' + '\u2606' + '\u2606'
-      };
+      };*/
 
       return {
         getCoffee: getCoffee,

@@ -61,7 +61,6 @@
       function _freshDrink(){
         return {
           drink: 'coffee',
-          rating: 'oneStar'
         };
       }
 
