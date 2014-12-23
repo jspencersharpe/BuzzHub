@@ -5,15 +5,17 @@
       <th>Drink</th>
       <th>Rating</th>
       <th>Date</th>
+      <th>Comment</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="(drinkId, drink) in coffee.drinks">
-      <td>{{drink.shop}}</td>
+      <td class="shops">{{drink.shop}}</td>
       <td>{{drink.drink}}</td>
-      <td>{{drink.rating}}</td>
+      <td class="rating">{{drink.rating}}</td>
       <td>{{drink.date | date}}</td>
-      <td>
+      <td class="comments">{{drink.comment}}</td>
+      <td class="buttons">
         <a class="btn btn-primary" href="/#/drinks/{{drinkId}}">Show</a>
         <a class="btn btn-primary" href="/#/drinks/{{drinkId}}/edit">Edit</a>
       <button ng-click="coffee.removeCoffee(drinkId)">Delete</button>

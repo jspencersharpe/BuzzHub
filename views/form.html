@@ -36,6 +36,10 @@
     <label class="control-label">Date</label>
     <input class="form-control" type="text" ng-model="coffee.newDrink.date" bs-datepicker required>
   </div>
+  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.comment}">
+    <label class="control-label">Comment</label>
+    <input class="form-control" maxlength="50" type="text" ng-model="coffee.newDrink.comment">
+  </div>
   <input type="submit" value="Add Drink" ng-disabled="myForm.$invalid">
 </form>
 </div>
