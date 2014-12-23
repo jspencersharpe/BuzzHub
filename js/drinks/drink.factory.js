@@ -7,7 +7,7 @@
       function _coffeesUrl(id) {
         if (id) {
           return FIREBASE_URL + '/users/' + $rootScope.user.uid +
-            '/drinks/' + id + '.json?auth=' + $rootScope.user.token;
+            '/drinks.json?auth=/' + id + '.json?auth=' + $rootScope.user.token;
         } else {
           return FIREBASE_URL + '/users/' + $rootScope.user.uid +
             '/drinks.json?auth=' + $rootScope.user.token;
