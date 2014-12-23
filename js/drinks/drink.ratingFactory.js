@@ -1,4 +1,4 @@
-;(function(){
+/*;(function(){
   
   angular.module('buzzHub')
     .factory('ratingFactory', function($rootScope, $location, FIREBASE_URL, $http){
@@ -11,7 +11,6 @@
           console.log("error")       
         }
       }
-
 
     function getRating (id, cb) {
         $http.get(_ratingsUrl(id))
@@ -26,4 +25,4 @@
     //indexOf(ratingOptions) divided by number of ratings.
 
     })
-}()); 
+}()); */
