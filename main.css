@@ -78,6 +78,10 @@ form.new-drink label {
   font-size: 2em;
 }
 
+#my-drink {
+  max-width: 150px;
+}
+
 /*Login Page*/
 
 form.login {

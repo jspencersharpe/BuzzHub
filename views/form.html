@@ -41,6 +41,11 @@
     <label class="control-label">Comment</label>
     <input class="form-control" maxlength="50" type="text" ng-model="coffee.newDrink.comment">
   </div>
+  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.pic}">
+    <label class="control-label">Image</label>
+    <input class="form-control" type="file" name="pic" accept="image/*" ng-model="coffee.newDrink.pic">
+    <img id="my-drink" src="#" alt="">
+  </div>
   <input type="submit" value="Add Drink" ng-disabled="myForm.$invalid">
 </form>
 </div>
