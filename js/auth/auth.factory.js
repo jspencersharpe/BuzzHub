@@ -37,10 +37,12 @@
           newPassword : newPass,
         }, function(error) {
           if (error === null) {
-            console.log('Password changed successfully');
+            //console.log('Password changed successfully');
+            alert('Password changed successfully');
             cb();
           } else {
-            console.log('Error changing password', error);
+            //console.log('Error changing password', error);
+            alert('Error changing password');
           }
         }
        );
