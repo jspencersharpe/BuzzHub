@@ -70,6 +70,7 @@ body {
 
 form.new-drink {
   padding-left: 15px;
+  padding-top: 0;
   height: 400px;
 }
 
