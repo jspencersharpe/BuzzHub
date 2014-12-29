@@ -92,9 +92,9 @@
           email : email,
         }, function(error) {
           if (error === null) {
-          console.log("password reset email sent successfully");
+          alert("password reset email sent successfully");
         } else {
-          console.log("error sending password reset email", error);
+          alert("error sending password reset email", error);
         }
         }
        );
