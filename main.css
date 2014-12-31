@@ -9,6 +9,7 @@ body {
 
 div.jumbotron {
   background-color: rgb(252, 194, 0);
+  height: 800px;
 }
 
 nav {
