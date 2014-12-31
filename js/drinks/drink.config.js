@@ -12,6 +12,11 @@
       })
       .when('/drinks/new', {
         templateUrl: 'views/form.html',
+        controller: 'MyCtrl',
+        private: true
+      })
+      .when('/drinks/new', {
+        templateUrl: 'views/form.html',
         controller: 'CoffeeController',
         controllerAs: 'coffee',
         private: true

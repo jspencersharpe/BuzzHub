@@ -41,27 +41,14 @@
     <label class="control-label">Comment</label>
     <input class="form-control" maxlength="50" type="text" ng-model="coffee.newDrink.comment">
   </div>
-  <!--
-  <div ng-controller="MyCtrl">
-  <input type="text" ng-model="coffee.newDrink.image">
-  <input type="file" ng-file-select="onFileSelect($files)">
-  <input type="file" ng-file-select="onFileSelect($files)" multiple accept="image/*">
-  <div class="button" ng-file-select="onFileSelect($files)" data-multiple="true"></div>
-  <div ng-file-drop="onFileSelect($files)"
-        ng-show="dropSupported">drop files here</div>
-  <div ng-file-drop-available="dropSupported=true" 
-        ng-show="!dropSupported">HTML5 Drop File is not supported!</div>
-  <button ng-click="upload.abort()">Cancel Upload</button>
-</div>
--->
-  <div class="form-group" ng-class="{'has-error': !coffee.newDrink.image}" ng-controller="uploader">
+  <div class="form-group" ng-controller="MyCtrl">
     <label class="control-label">Image</label>
-    <input class="form-control" type="file" file-input="files" onchange="angular.element(this).scope().filesChanged(this)" name="file" accept="image/*" ng-model="coffee.newDrink.image">
-    <button ng-click="upload()">Upload</button>
-    <img id="my-drink" src="#" alt="">
-    <li ng-repeat="file in files">{{drink.image}}</li>
+    <input type="file" file-model="myFile"/>
+    <button ng-click="uploadFile()">upload me</button>
   </div>
   <input type="submit" value="Add Drink" ng-disabled="myForm.$invalid">
 </form>
   </div>
 </div>
+
+
