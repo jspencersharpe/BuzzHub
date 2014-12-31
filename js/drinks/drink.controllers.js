@@ -9,6 +9,16 @@
         vm.drink = data;
       });
     })
+
+    .controller('MyCtrl', ['$scope', 'fileUpload', function($scope, fileUpload, FIREBASE_URL){
+    
+    $scope.uploadFile = function(){
+        var file = $scope.myFile;
+        console.log('file is ' + JSON.stringify(file));
+        fileUpload.uploadFileToUrl(file, FIREBASE_URL);
+    };
+    
+    }])
   
     .controller('EditController', function($routeParams, dataFactory, coffeeFactory){
       var vm = this;
@@ -66,5 +76,5 @@
       }
 
     });
-    
+   
 }());
