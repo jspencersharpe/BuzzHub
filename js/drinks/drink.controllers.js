@@ -9,6 +9,7 @@
         vm.drink = data;
       });
     })
+  
     .controller('EditController', function($routeParams, dataFactory, coffeeFactory){
       var vm = this;
       var id = $routeParams.id;
@@ -26,32 +27,17 @@
       vm.ratingOptions = coffeeFactory.ratingOptions;
 
     })
-    .controller('CoffeeController', function(coffeeFactory, dataFactory, $scope){
+    .controller('CoffeeController', function(coffeeFactory, $scope, dataFactory){
        var vm = this;
       
-        dataFactory.getData(function(items){
+       dataFactory.getData(function(items){
         vm.items = _.uniq(items);
         $scope.$digest();
       })
-
-      coffeeFactory.getAllDrinks(function(data){
+    
+     coffeeFactory.getAllDrinks(function(data){
         vm.drinks = data;
       });
-
-
-     $(function () {
-       $(":file").change(function () {
-        if (this.files && this.files[0]) {
-            var reader = new FileReader();
-            reader.onload = imageIsLoaded;
-            reader.readAsDataURL(this.files[0]);
-          }
-       });
-      });
-
-      function imageIsLoaded(e) {
-        $('#my-drink').attr('src', e.target.result);
-      };
 
       vm.addNewDrink = function(){
         coffeeFactory.createCoffee(vm.newDrink, function(data){

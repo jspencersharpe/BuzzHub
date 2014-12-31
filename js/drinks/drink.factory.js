@@ -24,7 +24,7 @@
           console.log(err);
         });
       }
-
+   
       function editCoffee(id, coffee){
         $http.put(_coffeesUrl(id), coffee)
         .success(function(data){
@@ -80,7 +80,7 @@
           '\u2606'+'\u2606'+'\u2606', 
           '\u2606'+'\u2606'+'\u2606'+'\u2606', 
           '\u2606'+'\u2606'+'\u2606'+'\u2606'+'\u2606' 
-            ];
+         ];
       
       return {
         getCoffee: getCoffee,

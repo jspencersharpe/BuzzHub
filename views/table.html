@@ -16,7 +16,7 @@
       <td class="rating">{{drink.rating}}</td>
       <td>{{drink.date | date}}</td>
       <td class="comments">{{drink.comment}}</td>
-      <td class="pic">{{drink.pic}}</td>
+      <td><img class="my-drink" ng-src="{{drink.image}}"></td>
       <td class="buttons">
         <a class="btn btn-primary" href="/#/drinks/{{drinkId}}">Show</a>
         <a class="btn btn-primary" href="/#/drinks/{{drinkId}}/edit">Edit</a>
