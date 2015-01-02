@@ -7,6 +7,6 @@
 
  <div ng-controller="Upload">
    <label class="control-label">Image</label>
-   <input type="file" file-model="myFile"/>
+   <input type="file" file-model="myFile" ng-model="coffee.newDrink.image">
    <button ng-click="uploadFile()">upload image</button>
  </div>
