@@ -28,9 +28,11 @@
   <div class="form-group" ng-class="{'has-error': !coffee.newDrink.rating}">
     <label class="control-label">Rating</label>
     <select ng-model="coffee.newDrink.rating">
-      <option value="{{val}}" ng-repeat="(val, text) in coffee.ratingOptions">
-      {{text}}
-      </option>
+      <option value="&#9733;">&#9733;</option>
+      <option value="&#9733;&#9733;">&#9733;&#9733;</option>
+      <option value="&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;</option>
+      <option value="&#9733;&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;&#9733;</option>
+      <option value="&#9733;&#9733;&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
     </select>
   </div>
   <div class="form-group" ng-class="{'has-error': !coffee.newDrink.date}">

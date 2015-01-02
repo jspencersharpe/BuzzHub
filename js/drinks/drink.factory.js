@@ -72,15 +72,6 @@
         espresso: 'espresso',
         other: 'other'
       };
-
-      var ratingOptions = [
-          '',
-          '\u2606', 
-          '\u2606'+'\u2606', 
-          '\u2606'+'\u2606'+'\u2606', 
-          '\u2606'+'\u2606'+'\u2606'+'\u2606', 
-          '\u2606'+'\u2606'+'\u2606'+'\u2606'+'\u2606' 
-         ];
       
       return {
         getCoffee: getCoffee,
@@ -89,7 +80,6 @@
         createCoffee: createCoffee,
         deleteCoffee: deleteCoffee,
         menuOptions: menuOptions,
-        ratingOptions: ratingOptions
       };
     })
 }());
