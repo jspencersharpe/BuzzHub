@@ -1,4 +1,3 @@
-;(function(){
 
 angular.module('buzzHub')
 
@@ -33,7 +32,7 @@ angular.module('buzzHub')
     }
 }])
 
-.controller('MyCtrl', ['$scope', 'fileUpload', function($scope, fileUpload, FIREBASE_URL){
+.controller('Upload', ['$scope', 'fileUpload', function($scope, $routeParams, fileUpload, FIREBASE_URL){
     
     $scope.uploadFile = function(){
         var file = $scope.myFile;
@@ -43,5 +42,5 @@ angular.module('buzzHub')
     
 }])
 
-}());
+
 

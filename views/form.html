@@ -43,11 +43,7 @@
     <label class="control-label">Comment</label>
     <input class="form-control" maxlength="50" type="text" ng-model="coffee.newDrink.comment">
   </div>
-  <div class="form-group" ng-controller="MyCtrl">
-    <label class="control-label">Image</label>
-    <input type="file" file-model="myFile"/>
-    <button ng-click="uploadFile()">upload me</button>
-  </div>
+  <div> <ng-include src="'views/upload.html'"></ng-include></div>
   <input type="submit" value="Add Drink" ng-disabled="myForm.$invalid">
 </form>
   </div>

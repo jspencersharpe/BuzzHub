@@ -9,18 +9,8 @@
         vm.drink = data;
       });
     })
-
-    .controller('MyCtrl', ['$scope', 'fileUpload', function($scope, fileUpload, FIREBASE_URL){
-    
-    $scope.uploadFile = function(){
-        var file = $scope.myFile;
-        console.log('file is ' + JSON.stringify(file));
-        fileUpload.uploadFileToUrl(file, FIREBASE_URL);
-    };
-    
-    }])
   
-    .controller('EditController', function($routeParams, dataFactory, coffeeFactory){
+  .controller('EditController', function($routeParams, dataFactory, coffeeFactory){
       var vm = this;
       var id = $routeParams.id;
 
@@ -33,8 +23,6 @@
       };
 
       vm.menuOptions = coffeeFactory.menuOptions;
-
-      vm.ratingOptions = coffeeFactory.ratingOptions;
 
     })
     .controller('CoffeeController', function(coffeeFactory, $scope, dataFactory){
@@ -66,8 +54,6 @@
       vm.newDrink = _freshDrink();
 
       vm.menuOptions = coffeeFactory.menuOptions;
-
-      vm.ratingOptions = coffeeFactory.ratingOptions;
 
       function _freshDrink(){
         return {
