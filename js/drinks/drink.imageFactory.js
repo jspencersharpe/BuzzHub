@@ -1,4 +1,3 @@
-
 angular.module('buzzHub')
 
 .directive('fileModel', ['$parse', function ($parse) {
@@ -23,8 +22,9 @@ angular.module('buzzHub')
         fd.append('file', file);
         $http.post(FIREBASE_URL, fd, {
             transformRequest: angular.identity,
-            headers: {'Content-Type': undefined}
-        })
+            headers: {'Content-Type': undefined,
+                      'Access-Control-Allow-Origin': '*'},
+                 })
         .success(function(){
         })
         .error(function(){
@@ -32,7 +32,7 @@ angular.module('buzzHub')
     }
 }])
 
-.controller('Upload', ['$scope', 'fileUpload', function($scope, $routeParams, fileUpload, FIREBASE_URL){
+.controller('Upload', ['$scope', '$routeParams', 'fileUpload', 'FIREBASE_URL', function($scope, $routeParams, fileUpload, FIREBASE_URL){
     
     $scope.uploadFile = function(){
         var file = $scope.myFile;
