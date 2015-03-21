@@ -1,0 +1,14 @@
+<div class="margin-bottom">
+<div class="container container-fluid">
+  <div class="col-md-4">
+<h1>{{show.drink.shop}}</h1>
+<h2>{{show.drink.drink}}</h2>
+<h2 class="rating-background">{{show.drink.rating}}</h2>
+<h3>{{show.drink.date | date}}</h3>
+<h3>{{show.drink.comment}}</h3> 
+  </div>
+  <div class="col-md-4">
+    <img class="show-image" id="show-image" src="https://s3.amazonaws.com/buzzhub/{{user.uid}}/{{show.drink.id}}.jpg">
+  </div>
+  </div>
+</div>

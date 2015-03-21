@@ -1,0 +1,26 @@
+ <form class="form-login" role="form">
+    <h2 class="form-login-heading">Login</h2>
+    <input type="text" class="form-control" placeholder="Username" data-ng-model="loginData.userName" required autofocus>
+    <input type="password" class="form-control" placeholder="Password" data-ng-model="loginData.password" required>
+    <button class="btn btn-lg btn-info btn-block" type="submit" data-ng-click="login()">Login</button>
+    <div data-ng-hide="message == ''" class="alert alert-danger">
+        {{message}}
+    </div>
+</form>
+
+<!--<div class="margin-bottom-login">
+<div class="container container-fluid">
+<form class="login" name="loginForm" ng-submit="login.login()" novalidate>
+  <div class="form-group" ng-class="{'has-error': loginForm.$dirty && !login.email}">
+    <label>Email Address</label>
+    <input class="form-control" type="email" ng-model="login.email" required>
+  </div>
+  <div class="form-group" ng-class="{'has-error': loginForm.$dirty && !login.password}">    <label>Password</label>
+    <input class="form-control" type="password" ng-model="login.password" required>
+  </div>
+  <div class="btn btn-default btn-block" ng-class="{disabled: loginForm.$invalid}" ng-click="login.register()">Register</div>
+  <input type="submit" class="btn btn-primary btn-block" value="Login" ng-class="{disabled: loginForm.$invalid}">
+  <div class="btn btn-default btn-block" ng-class="{disabled: !login.email}" ng-click="login.forgotPassword()">Forgot Password</div>
+</form>
+</div>
+</div>-->

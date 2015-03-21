@@ -1,0 +1,30 @@
+<div class="margin-bottom">
+<div class="container container-fluid">
+<h2 class="table-heading"><span id="user-email">{{loginController.userName}}</span>'s coffees</h2>
+<table class="my-coffees table table-responsive">
+  <thead>
+    <tr>
+      <th>Shop</th>
+      <th class="coffee">Drink</th>
+      <th>Rating</th>
+      <th class="comment">Comment</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="(coffeeId, coffee) in coffees">
+    <td class="shops">{{coffee.shop}}</td>
+    <td class="drink">{{coffee.drink}}</td>
+    <td class="rating">{{coffee.rating}}</td>
+    <td class="comment">{{coffee.comment}}</td>
+    <td><img class="my-coffee" ng-src="https://s3.amazonaws.com/buzzhub/{{user.uid}}/{{coffeeId}}.jpg" onerror="this.src='http://www.clker.com/cliparts/p/5/i/r/k/8/coffee-cup-hi.png'"></td>
+    <td class="buttons">
+        <a class="button" href="/#/coffees/{{coffeeId}}">Show</a>
+        <a id="edit-button" class="button" href="/#/coffees/{{coffeeId}}/edit">Edit</a>
+        <button class="btn btn-danger" ng-click="coffee.removeCoffee(coffeeId)">Delete</button>
+    </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>

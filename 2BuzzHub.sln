@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2BuzzHub", "2BuzzHub\2BuzzHub.csproj", "{9E382004-E65D-489B-9C7D-B61A1B23A881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2BuzzHub.Tests", "2BuzzHub.Tests\2BuzzHub.Tests.csproj", "{A363B231-8D01-4743-ACE3-E64CE80169EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E382004-E65D-489B-9C7D-B61A1B23A881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E382004-E65D-489B-9C7D-B61A1B23A881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E382004-E65D-489B-9C7D-B61A1B23A881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E382004-E65D-489B-9C7D-B61A1B23A881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A363B231-8D01-4743-ACE3-E64CE80169EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A363B231-8D01-4743-ACE3-E64CE80169EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A363B231-8D01-4743-ACE3-E64CE80169EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A363B231-8D01-4743-ACE3-E64CE80169EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
