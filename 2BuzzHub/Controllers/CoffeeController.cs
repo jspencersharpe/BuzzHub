@@ -35,19 +35,19 @@ namespace BuzzHub.Controllers
             return coffee;
         }
 
-        //// POST
-        //[Authorize]
-        //[Route("api/Coffee")]
-        //[HttpPost]
-        //public HttpResponseMessage PostCoffee(Coffee coffee)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-        //    }
-        //    repo.Add(coffee);
-        //    return Request.CreateResponse(HttpStatusCode.Created);
-        //} 
+        // POST
+        [Authorize]
+        [Route("api/Coffee")]
+        [HttpPost]
+        public HttpResponseMessage PostCoffee(Coffee coffee)
+        {
+            if (!ModelState.IsValid)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+            }
+            repo.Add(coffee);
+            return Request.CreateResponse(HttpStatusCode.Created);
+        } 
 
         //[Route("api/Coffee")]
         //[HttpPost]
