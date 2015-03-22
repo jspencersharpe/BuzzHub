@@ -3,7 +3,7 @@
 app.config(function ($routeProvider) {
 
     $routeProvider.when('/home', {
-        controller: 'homeController',
+        controller: 'HomeController',
         templateUrl: '/Static/Views/home.html'
     });
 

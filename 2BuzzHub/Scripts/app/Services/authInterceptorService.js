@@ -12,7 +12,7 @@ app.factory('authInterceptorService', ['$location', '$q', 'localStorageService',
             
                         if(authData)
                             config.headers.Authorization = 'Bearer ' + authData.token;
-            
+                        
                         return config;
                     },
         responseError: function (rejection) {

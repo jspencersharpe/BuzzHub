@@ -17,18 +17,6 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
     };
 
 
-
-
-   // $scope.coffee = [];
-
-
-
-    //coffeeService.getCoffee().then(function (results) {
-
-    //    $scope.coffee = results.data;
-
-  
-        //alert(error.data.message);
   
 
 }]);
