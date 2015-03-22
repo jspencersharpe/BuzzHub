@@ -1,41 +1,23 @@
 ﻿'use strict';
 angular.module('buzzHub')
-app.controller('signupController', ['$scope', '$location', '$timeout', 'authService', function ($scope, $location, $timeout, authService) {
+app.controller('SignupController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
 
-    $scope.savedSuccessfully = false;
-    $scope.message = "";
-
-    $scope.registration = {
-        userName: "",
-        password: "",
-        confirmPassword: ""
+    $scope.signup = function () {
+        authService.register($scope.user).then(
+            function (res) {
+                console.log(res);
+            },
+            function (err) {
+                console.log(err);
+                $scope.errors = [];
+                ers = err.data.ModelState;
+                for (var key in ers) {
+                    ers[key].forEach(function (el) {
+                        $scope.errors.push(el);
+                    })
+                }
+              }
+            );
+        $scope.user = {};
     };
-
-    $scope.signUp = function () {
-
-        authService.saveRegistration($scope.registration).then(function (response) {
-
-            $scope.savedSuccessfully = true;
-            $scope.message = "User has been registered successfully, you will be redicted to login page in 2 seconds.";
-            startTimer();
-
-        },
-         function (response) {
-             var errors = [];
-             for (var key in response.data.modelState) {
-                 for (var i = 0; i < response.data.modelState[key].length; i++) {
-                     errors.push(response.data.modelState[key][i]);
-                 }
-             }
-             $scope.message = "Failed to register user due to:" + errors.join(' ');
-         });
-    };
-
-    var startTimer = function () {
-        var timer = $timeout(function () {
-            $timeout.cancel(timer);
-            $location.path('/login');
-        }, 2000);
-    }
-
-}]);
+}])

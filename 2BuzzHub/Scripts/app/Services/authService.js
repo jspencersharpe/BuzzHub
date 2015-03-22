@@ -2,72 +2,35 @@
 angular.module('buzzHub')
 app.factory('authService', ['$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
 
-    var serviceBase = 'http://localhost:58110/';
-    var authServiceFactory = {};
+    var serviceBase = 'api/Account';
+    var auths = {};
 
-    var _authentication = {
-        isAuth: false,
-        userName: ""
-    };
+    function _register(user) {
+        return $http.post(serviceBase + 'Register', user);
+    }
 
-    var _saveRegistration = function (registration) {
-
-        _logOut();
-
-        return $http.post(serviceBase + 'api/account/register', registration).then(function (response) {
-            return response;
-        });
-
-    };
-
-    var _login = function (loginData) {
-
-        var data = "grant_type=password&username=" + loginData.userName + "&password=" + loginData.password;
-
+    function _login(user) {
+        user.grant_type = 'password';
         var deferred = $q.defer();
 
-        $http.post(serviceBase + 'token', data, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }).success(function (response) {
-
-            localStorageService.set('authorizationData', { token: response.access_token, userName: loginData.userName });
-
-            _authentication.isAuth = true;
-            _authentication.userName = loginData.userName;
-
-            deferred.resolve(response);
-
-        }).error(function (err, status) {
-            _logOut();
+        $.post('/Token', user)
+        .then(function (data) {
+            localStorageService.set('auth', {
+                token: data.access_token,
+                name: user.username
+            });
+            deferred.resolve(data);
+        }, function (err) {
             deferred.reject(err);
+            console.log(err);
         });
 
         return deferred.promise;
-
-    };
-
-    var _logOut = function () {
-
-        localStorageService.remove('authorizationData');
-
-        _authentication.isAuth = false;
-        _authentication.userName = "";
-
-    };
-
-    var _fillAuthData = function () {
-
-        var authData = localStorageService.get('authorizationData');
-        if (authData) {
-            _authentication.isAuth = true;
-            _authentication.userName = authData.userName;
-        }
-
     }
 
-    authServiceFactory.saveRegistration = _saveRegistration;
-    authServiceFactory.login = _login;
-    authServiceFactory.logOut = _logOut;
-    authServiceFactory.fillAuthData = _fillAuthData;
-    authServiceFactory.authentication = _authentication;
+    auths.login = _login;
+    auths.register = _register;
 
-    return authServiceFactory;
+    return auths;
+
 }]);

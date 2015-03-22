@@ -1,6 +1,6 @@
 ﻿'use strict';
 angular.module('buzzHub')
-app.factory('authInterceptorService', ['$q', '$location', 'localStorageService', function ($q, $location, localStorageService) {
+app.factory('authInterceptorService', ['$location', '$q', 'localStorageService', function ($location, $q, localStorageService) {
 
     return {
         request: function (config) {

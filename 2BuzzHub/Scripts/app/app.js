@@ -8,12 +8,12 @@ app.config(function ($routeProvider) {
     });
 
     $routeProvider.when("/login", {
-        controller: "loginController",
+        controller: "LoginController",
         templateUrl: "/Static/Views/login.html"
     });
 
     $routeProvider.when("/signup", {
-        controller: "signupController",
+        controller: "SignupController",
         templateUrl: "/Static/Views/signup.html"
     });
 
@@ -35,6 +35,4 @@ app.config(function ($routeProvider) {
         $httpProvider.interceptors.push('authInterceptorService');
     });
 
-app.run(['authService', function (authService) {
-    authService.fillAuthData();
-}]);
+

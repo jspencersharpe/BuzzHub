@@ -1,24 +1,14 @@
 ﻿'use strict';
-angular.module('buzzhub')
-app.controller('logincontroller', ['$scope', '$location', 'authservice', function ($scope, $location, authservice) {
-
-    $scope.logindata = {
-        username: "",
-        password: ""
-    };
-
-    $scope.message = "";
-
+angular.module('buzzHub')
+app.controller('LoginController', ['$scope', '$location', 'authService',
+                            function ($scope, $location, authService) {
     $scope.login = function () {
-
-        authservice.login($scope.logindata).then(function (response) {
-
-            $location.path('/orders');
-
+        authService.login($scope.loginData)
+            .then(function (data) {
+            $location.path('coffees');
         },
          function (err) {
-             $scope.message = err.error_description;
-         });
-    };
 
-}]);
+         });    
+    };
+}])
