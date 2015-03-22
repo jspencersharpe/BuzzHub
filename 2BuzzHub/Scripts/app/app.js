@@ -2,33 +2,33 @@
 
 app.config(function ($routeProvider) {
 
-    $routeProvider.when("/home", {
-        controller: "homeController",
-        templateUrl: "/Static/Views/home.html"
+    $routeProvider.when('/home', {
+        controller: 'homeController',
+        templateUrl: '/Static/Views/home.html'
     });
 
-    $routeProvider.when("/login", {
-        controller: "LoginController",
-        templateUrl: "/Static/Views/login.html"
+    $routeProvider.when('/login', {
+        controller: 'LoginController',
+        templateUrl: '/Static/Views/login.html'
     });
 
-    $routeProvider.when("/signup", {
-        controller: "SignupController",
-        templateUrl: "/Static/Views/signup.html"
+    $routeProvider.when('/register', {
+        controller: 'SignupController',
+        templateUrl: '/Static/Views/signup.html'
     });
 
-    $routeProvider.when("/form", {
-        controller: "coffeeController",
-        templateUrl: "/Static/Views/form.html",
-        controllerAs: "coffee"
+    $routeProvider.when('/form', {
+        controller: 'coffeeController',
+        templateUrl: '/Static/Views/form.html',
+        controllerAs: 'coffee'
     });
-    $routeProvider.when("/table", {
-        controller: "coffeeController",
-        templateUrl: "/Static/Views/table.html",
-        controllerAs: "coffee"
+    $routeProvider.when('/table', {
+        controller: 'coffeeController',
+        templateUrl: '/Static/Views/table.html',
+        controllerAs: 'coffee'
     })
 
-    $routeProvider.otherwise({ redirectTo: "/home" });
+    $routeProvider.otherwise({ redirectTo: '/home' });
 })
 
     app.config(function ($httpProvider) {
