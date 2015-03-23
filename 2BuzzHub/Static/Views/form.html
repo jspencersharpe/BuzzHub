@@ -1,11 +1,11 @@
 <div class="margin-bottom">
 <div class="container container-fluid">
 <div class="row">  
-      <h2>Coffee Shops Near You</h2>
+      <h2>Coffee shops Near You</h2>
    <div class="col-md-5">
     <div class="shops-list">
       <ul>
-          <li class="shops-found" ng-repeat="item in items" ng-click="coffee.Shop=item">{{item}}</li>
+          <li class="shops-found" ng-repeat="item in items" ng-click="coffee.shop=item">{{item}}</li>
       </ul>
     </div>
     <p id="fsq">Fueled by <a href="https://foursquare.com/" target="_blank"><img id="foursquare" src="doc/foursquare.png" alt="foursquare"></a></p>
@@ -16,14 +16,14 @@
     </div>
   <div class="col-md-4">
 <form class="new-drink" name="myForm" enctype="multipart/form-data" ng-submit="myForm.$valid && postCoffee()" validate>
-  <div class="form-group" ng-class=" {'has-error': !coffee.Shop}" required>
+  <div class="form-group" ng-class=" {'has-error': !coffee.shop}" required>
     <label>Shop</label>
-    <input class="form-control" id="current-shop" type="text" ng-model="coffee.Shop" required>
+    <input class="form-control" id="current-shop" type="text" ng-model="coffee.shop" required>
   </div>
-    <div class="form-group" ng-class="{'has-error': !coffee.Drink}" required>
+    <div class="form-group" ng-class="{'has-error': !coffee.drink}" required>
     <label>Drink</label>
         <!--<input type="text" class="form-control" ng-model="coffee.drink"/>-->
-    <select class="form-control" ng-model="coffee.Drink">
+    <select class="form-control" ng-model="coffee.drink">
         <option>coffee</option>
         <option>espresso</option>
         <option>latte</option>
@@ -33,10 +33,10 @@
         <option>mocha</option>
     </select>   
   </div>
-  <div class="form-group" ng-class="{'has-error': !coffee.Rating}" required>
+  <div class="form-group" ng-class="{'has-error': !coffee.rating}" required>
     <label>Rating</label>
-      <input class="form-control" type="text" ng-model="coffee.Rating">
-        <!--<select class="form-control" ng-model="coffee.Rating">
+      <input class="form-control" type="text" ng-model="coffee.rating">
+        <!--<select class="form-control" ng-model="coffee.rating">
            <option value="&#9733;">&#9733;</option>
            <option value="&#9733;&#9733;">&#9733;&#9733;</option>		  
            <option value="&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;</option>
@@ -44,19 +44,19 @@
            <option value="&#9733;&#9733;&#9733;&#9733;&#9733;">&#9733;&#9733;&#9733;&#9733;&#9733;</option>      
         </select>-->
   </div>
-  <div class="form-group" ng-class="{'has-error': !coffee.Date}">
+  <div class="form-group" ng-class="{'has-error': !coffee.date}">
     <div class="date">
       <label>Date</label>
-      <input class="form-control" type="text" ng-model="coffee.Date" bs-datepicker required>
+      <input class="form-control" type="text" ng-model="coffee.date" bs-datepicker required>
     </div>
   </div>
-  <div class="form-group" ng-class="{'has-error': !coffee.Comment}">
+  <div class="form-group" ng-class="{'has-error': !coffee.comment}">
     <label>Comment</label>
-    <input class="form-control" maxlength="50" type="text" ng-model="coffee.Comment">
+    <input class="form-control" maxlength="50" type="text" ng-model="coffee.comment">
   </div>
     <div>
         <label>Image</label>
-        <input class="form-control" ng-model="coffee.ImagePath"/>
+        <input class="form-control" ng-model="coffee.imagePath"/>
     </div>
   <!--<div class="upload">
     <div class="thumbnail">

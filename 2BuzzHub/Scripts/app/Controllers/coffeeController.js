@@ -14,9 +14,14 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
     };
 
     $scope.postCoffee = function () {
-        Coffee.save($scope.coffee, null, function (error) {
+
+        $http.post('api/Coffee', $scope.coffee)
+        .catch(function (error) {
             console.log(error);
-        });
+        })
+        //Coffee.save($scope.coffee, null, function (error) {
+        //    console.log(error);
+        //});
     };
   
   
