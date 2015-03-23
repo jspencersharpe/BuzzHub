@@ -4,6 +4,6 @@ app.controller('HomeController', ['localStorageService', '$location',
                            function (localStorageService, $location) {
     var auth = localStorageService.get('auth');
     if (auth) {
-        $location.path('home');
+        $location.path('/home');
     }
 }]);

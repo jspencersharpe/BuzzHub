@@ -1,10 +1,11 @@
 ﻿'use strict';
 angular.module('buzzHub')
-app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee','$scope', function (dataFactory, localStorageService, Coffee, $scope) {
-    var vm = this;
+app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee','$scope', '$http', '$location', function (dataFactory, localStorageService, Coffee, $scope, $http, $location) {
+    //var vm = this;
 
+    $scope.coffee = {};
     dataFactory.getData(function (items) {
-        vm.items = _.uniq(items);
+        $scope.items = _.uniq(items);
         $scope.$digest();
     });
 
@@ -12,14 +13,15 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
         coffee.get($scope.coffee);
     };
 
-    $scope.postCoffee = function() {
-        Coffee.save($scope.coffee);
+    $scope.postCoffee = function () {
+        Coffee.save($scope.coffee, null, function (error) {
+            console.log(error);
+        });
     };
-
-
   
-
+  
 }]);
+
 //; (function () {
 //    'use strict';
 

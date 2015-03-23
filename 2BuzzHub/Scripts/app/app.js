@@ -19,13 +19,11 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/form', {
         controller: 'coffeeController',
-        templateUrl: '/Static/Views/form.html',
-        controllerAs: 'coffee'
+        templateUrl: '/Static/Views/form.html'
     });
     $routeProvider.when('/table', {
         controller: 'coffeeController',
-        templateUrl: '/Static/Views/table.html',
-        controllerAs: 'coffee'
+        templateUrl: '/Static/Views/table.html'
     })
 
     $routeProvider.otherwise({ redirectTo: '/home' });

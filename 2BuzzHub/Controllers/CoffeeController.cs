@@ -36,7 +36,7 @@ namespace BuzzHub.Controllers
         }
 
         // POST
-        [Authorize]
+        //[Authorize]
         [Route("api/Coffee")]
         [HttpPost]
         public HttpResponseMessage PostCoffee(Coffee coffee)
