@@ -1,7 +1,7 @@
 ﻿'use strict';
 angular.module('buzzHub')
-app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee','$scope', '$http', '$location', function (dataFactory, localStorageService, Coffee, $scope, $http, $location) {
-    //var vm = this;
+app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee', '$scope', '$http', '$location',
+                            function (dataFactory, localStorageService, Coffee, $scope, $http, $location) {
 
     $scope.coffee = {};
     dataFactory.getData(function (items) {
@@ -9,8 +9,20 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
         $scope.$digest();
     });
 
+    //$scope.getAllCoffees = function () {
+
+    //    $http.get('api/Coffee/')
+    //        .then(function (result) {
+    //            console(result);
+    //        },
+    //        function () {
+    //            alert("error");
+    //        });
+                                //};
+
     $scope.getAllCoffees = function () {
         coffee.get($scope.coffee);
+        console.log($scope.coffee);
     };
 
     $scope.postCoffee = function () {
@@ -23,7 +35,6 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
         //    console.log(error);
         //});
     };
-  
   
 }]);
 

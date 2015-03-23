@@ -1037,7 +1037,6 @@
     <Content Include="Scripts\app\Controllers\uploadController.js" />
     <Content Include="Scripts\app\data.js" />
     <Content Include="Scripts\app\drinks\drink.config.js" />
-    <Content Include="Scripts\app\event.js" />
     <Content Include="Scripts\app\Factories\coffeeFactory.js" />
     <Content Include="Scripts\app\Services\authInterceptorService.js" />
     <Content Include="Scripts\app\Services\authService.js" />

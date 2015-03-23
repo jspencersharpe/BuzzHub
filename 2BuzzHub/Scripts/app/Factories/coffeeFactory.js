@@ -1,8 +1,8 @@
 'use strict';
 angular.module('buzzHub')
-    .factory('Coffee', ['$resource', '$rootScope', '$http', '$location',
-                function ($resource, $rootScope, $http, $location) {
-        return $resource('api/Coffee/:id', { id: '@id' });
+    .factory('Coffee', ['$resource', '$rootScope', '$http', '$location', function ($resource, $rootScope, $http, $location) {
+
+      return $resource('api/Coffee/:id', { id: '@id' });
      
     }]);
 
