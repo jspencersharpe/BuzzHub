@@ -10,20 +10,17 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
     });
 
     //$scope.getAllCoffees = function () {
-
-    //    $http.get('api/Coffee/')
-    //        .then(function (result) {
-    //            console(result);
-    //        },
-    //        function () {
-    //            alert("error");
-    //        });
+    //    coffee.get($scope.coffee);
+    //    console.log($scope.coffee);
                                 //};
 
-    $scope.getAllCoffees = function () {
-        coffee.get($scope.coffee);
+    $scope.drinks = Coffee.get();
+    console.log($scope.drinks);
+                                
+    $scope.get = function () {
+        $http.get('api/Coffee', $scope.coffee)
         console.log($scope.coffee);
-    };
+    }
 
     $scope.postCoffee = function () {
 

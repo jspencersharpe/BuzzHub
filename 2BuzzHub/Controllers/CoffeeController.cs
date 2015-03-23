@@ -26,13 +26,20 @@ namespace BuzzHub.Controllers
 
         // GET
         //[Authorize]
+        //[Route("api/Coffee")]
+        //[HttpGet]
+        //public List<Coffee> GetAllCoffees()
+        //{
+        //    List<Coffee> coffee = new List<Coffee>();
+        //    coffee = repo.All().ToList();
+        //    return coffee;
+        //}
+
+        //GET
         [Route("api/Coffee")]
         [HttpGet]
-        public List<Coffee> GetAllCoffees()
-        {
-            List<Coffee> coffee = new List<Coffee>();
-            coffee = repo.All().ToList();
-            return coffee;
+        public IEnumerable<Coffee> Get() {
+            return repo.All();
         }
 
         // POST
@@ -49,12 +56,7 @@ namespace BuzzHub.Controllers
             return Request.CreateResponse(HttpStatusCode.Created);
         } 
 
-        //[Route("api/Coffee")]
-        //[HttpPost]
-        //public CreateCoffee(Coffee coffee)
-        //{
-        //    coffee.UserId = 
-        //}
+       
       
     }
 
