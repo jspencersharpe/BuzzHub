@@ -6,6 +6,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Cors;
+using System.Net;
 
 namespace BuzzHub
 {
@@ -29,5 +30,6 @@ namespace BuzzHub
                 defaults: new { id = RouteParameter.Optional }
             );
         }
+
     }
 }

@@ -23,19 +23,35 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
         })
     };
 
-    //DELETE
+   // DELETE
+    //$scope.deleteCoffee = function (index) {
+    //    $scope.drinks[index].$delete();
+    //    $scope.drinks.splice(index, 1);
+    //}
+
     $scope.deleteCoffee = function (index) {
-        $scope.drinks[index].$delete();
+        $http.$delete('api/Coffee/id', $scope.coffee)
+        $scope.drinks[index]
         $scope.drinks.splice(index, 1);
     }
+
+    //$scope.deleteCoffee = function (id) {
+    //    Coffee.deleteCoffee({ id: id });
+    //}
+
+    ////DELETE 2
+    //$scope.deleteCoffee = function () {
+    //    $http.post('api/Coffee', $scope.coffee)
+    //    $scope.drinks.splice(index, 1);
+    //}
 
     //$scope.deleteCoffee = function (coffee) {
     //    coffee.remove(); {
  
     //    };
     //}
-    
-                                
+
+                              
 
   
 }]);

@@ -45,6 +45,7 @@ namespace BuzzHub.Controllers
         public void DeleteCoffee(int id)
         {
             repo.DeleteCoffee(id);
+            repo.SaveChanges();
         }
 
        
