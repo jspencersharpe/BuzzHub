@@ -1,37 +1,42 @@
 ﻿'use strict';
 angular.module('buzzHub')
-app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee', '$scope', '$http', '$location',
-                            function (dataFactory, localStorageService, Coffee, $scope, $http, $location) {
+app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee', '$scope', '$http', '$location', function (dataFactory, localStorageService, Coffee, $scope, $http, $location) {
 
     $scope.coffee = {};
+
+    //Foursquare API
     dataFactory.getData(function (items) {
         $scope.items = _.uniq(items);
         $scope.$digest();
     });
 
-    //$scope.getAllCoffees = function () {
-    //    coffee.get($scope.coffee);
-    //    console.log($scope.coffee);
-                                //};
-
+    //GET
     $scope.drinks = Coffee.get();
     console.log($scope.drinks);
                                 
-    $scope.get = function () {
-        $http.get('api/Coffee', $scope.coffee)
-        console.log($scope.coffee);
-    }
-
+    //POST
     $scope.postCoffee = function () {
 
         $http.post('api/Coffee', $scope.coffee)
         .catch(function (error) {
             console.log(error);
         })
-        //Coffee.save($scope.coffee, null, function (error) {
-        //    console.log(error);
-        //});
     };
+
+    //DELETE
+    $scope.deleteCoffee = function (index) {
+        $scope.drinks[index].$delete();
+        $scope.drinks.splice(index, 1);
+    }
+
+    //$scope.deleteCoffee = function (coffee) {
+    //    coffee.remove(); {
+ 
+    //    };
+    //}
+    
+                                
+
   
 }]);
 

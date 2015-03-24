@@ -51,3 +51,5 @@ c:\users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub.
 c:\Users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub.Tests\bin\Debug\System.Web.Cors.dll
 c:\Users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub.Tests\bin\Debug\System.Web.Http.Cors.dll
 c:\Users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub.Tests\bin\Debug\System.Web.Http.Cors.xml
+c:\Users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub.Tests\bin\Debug\Microsoft.Owin.Cors.dll
+c:\Users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub.Tests\bin\Debug\Microsoft.Owin.Cors.xml

@@ -12,6 +12,7 @@ namespace BuzzHub.Repository
         int GetCount();
         void Add(Coffee C);
         void Delete(Coffee C);
+        void DeleteCoffee(int id);
         void Clear();
         IEnumerable<Coffee> PastCoffees();
         IEnumerable<Coffee> All();

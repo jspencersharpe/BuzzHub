@@ -64,6 +64,15 @@ namespace BuzzHub.Repository
             _dbContext.SaveChanges();
         }
 
+        public void DeleteCoffee(int id) 
+        {
+            Coffee coffee = _dbContext.Coffees
+                .Where(c => c.CoffeeId == id).First();
+            _dbContext.Coffees.Remove(coffee);
+            _dbContext.Coffees.RemoveRange(_dbContext.Coffees.Where(i => i.CoffeeId == id));
+            _dbContext.SaveChanges();
+        }
+
         public void Clear() 
         {
             var a = this.All();

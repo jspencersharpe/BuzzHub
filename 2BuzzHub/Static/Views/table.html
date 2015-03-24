@@ -21,7 +21,7 @@
     <td class="buttons">
         <a class="button" href="/#/coffees/{{CoffeeId}}">Show</a>
         <a id="edit-button" class="button" href="/#/coffees/{{CoffeeId}}/edit">Edit</a>
-        <button class="btn btn-danger" ng-click="coffee.removeCoffee(coffeeId)">Delete</button>
+        <button class="btn btn-danger" ng-click="deleteCoffee($index)">Delete</button>
     </td>
     </tr>
   </tbody>

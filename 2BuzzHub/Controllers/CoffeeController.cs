@@ -9,31 +9,14 @@ using System.Net.Http;
 using System.Web.Security;
 using BuzzHub.Repository;
 using BuzzHub.Models;
+using System.Web.Http.Cors;
 
 namespace BuzzHub.Controllers
 {
+    [EnableCors(origins: "api/Coffee", headers: "*", methods: "*")]
     public class CoffeeController : ApiController
     {
         private CoffeeRepository repo = new CoffeeRepository();
-
-
-        //[Authorize]
-        //[Route("")]
-        //public IHttpActionResult Get()
-        //{
-        //    return Ok(Coffee.CreateCoffee());
-        //}
-
-        // GET
-        //[Authorize]
-        //[Route("api/Coffee")]
-        //[HttpGet]
-        //public List<Coffee> GetAllCoffees()
-        //{
-        //    List<Coffee> coffee = new List<Coffee>();
-        //    coffee = repo.All().ToList();
-        //    return coffee;
-        //}
 
         //GET
         [Route("api/Coffee")]
@@ -54,7 +37,15 @@ namespace BuzzHub.Controllers
             }
             repo.Add(coffee);
             return Request.CreateResponse(HttpStatusCode.Created);
-        } 
+        }
+
+        //DELETE
+        [Route("api/Coffee/{id}")]
+        [HttpDelete]
+        public void DeleteCoffee(int id)
+        {
+            repo.DeleteCoffee(id);
+        }
 
        
       
