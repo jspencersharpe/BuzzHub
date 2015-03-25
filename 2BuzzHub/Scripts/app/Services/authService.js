@@ -1,7 +1,7 @@
 ﻿'use strict';
 angular.module('buzzHub')
-.factory('authService', ['$http', '$q', 'localStorageService',
-                 function($http,   $q,   localStorageService){
+.factory('authService', ['$http', '$q', 'localStorageService', '$rootScope',
+                 function($http,   $q,   localStorageService, $rootScope){
 
                      var base = '/api/Account/';
                      var as = {};
@@ -18,6 +18,7 @@ angular.module('buzzHub')
                                  token: data.access_token,
                                  name: user.username
                              });
+                             $rootScope.auth = localStorageService.get('auth');
                              deferred.resolve(data); 
                          }, function(err){
                              deferred.reject(err); 

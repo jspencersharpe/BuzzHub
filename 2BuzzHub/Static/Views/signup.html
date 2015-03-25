@@ -1,9 +1,9 @@
 ﻿<form ng-submit="signup()">
     <label>email</label>
-    <input type="text" ng-model="user.Email" />
+    <input type="text" ng-model="user.Email" required/>
     <label>password</label>
-    <input type="password" ng-model="user.Password" />
+    <input type="password" ng-model="user.Password" required/>
     <label>repeat password</label>
-    <input type="password" ng-model="user.ConfirmPassword" />
+    <input type="password" ng-model="user.ConfirmPassword" required/>
     <button type="submit">Register</button>
 </form>

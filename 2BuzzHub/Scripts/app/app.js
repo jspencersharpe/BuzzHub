@@ -9,7 +9,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/login', {
         controller: 'LoginController',
-        templateUrl: '/Static/Views/login.html'
+        templateUrl: '/Static/Views/login.html',
     });
 
     $routeProvider.when('/register', {

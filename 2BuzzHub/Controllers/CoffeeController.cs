@@ -42,10 +42,11 @@ namespace BuzzHub.Controllers
         //DELETE
         [Route("api/Coffee/{id}")]
         [HttpDelete]
-        public void DeleteCoffee(int id)
+        public HttpResponseMessage DeleteCoffee(int id)
         {
             repo.DeleteCoffee(id);
             repo.SaveChanges();
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
        

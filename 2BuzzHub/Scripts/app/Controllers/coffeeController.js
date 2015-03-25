@@ -23,21 +23,10 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
         })
     };
 
-   // DELETE
-    //$scope.deleteCoffee = function (index) {
-    //    $scope.drinks[index].$delete();
-    //    $scope.drinks.splice(index, 1);
-    //}
-
-    $scope.deleteCoffee = function (index) {
-        $http.$delete('api/Coffee/id', $scope.coffee)
-        $scope.drinks[index]
-        $scope.drinks.splice(index, 1);
+    $scope.deleteCoffee = function (id) {
+        
+        Coffee.deleteCoffee({id: id});
     }
-
-    //$scope.deleteCoffee = function (id) {
-    //    Coffee.deleteCoffee({ id: id });
-    //}
 
     ////DELETE 2
     //$scope.deleteCoffee = function () {

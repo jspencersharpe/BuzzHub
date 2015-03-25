@@ -92,13 +92,13 @@ namespace BuzzHub.Repository
             return qu.ToList<Coffee>();
         }
 
-        //public Coffee GetById(int id) 
-        //{
-        //    var query = from Coffee in _dbContext.Coffees
-        //                where Coffee.CoffeeId == id
-        //                select Coffee;
-        //    return query.First<Coffee>();
-        //}
+        public Coffee GetById(int id)
+        {
+            var query = from Coffee in _dbContext.Coffees
+                        where Coffee.CoffeeId == id
+                        select Coffee;
+            return query.First<Coffee>();
+        }
 
         //public Coffee GetUserById(string id)
         //{
