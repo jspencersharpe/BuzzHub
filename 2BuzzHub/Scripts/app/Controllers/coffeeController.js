@@ -1,8 +1,10 @@
 ﻿'use strict';
 angular.module('buzzHub')
-app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee', '$scope', '$http', '$location', function (dataFactory, localStorageService, Coffee, $scope, $http, $location) {
+app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffee', '$scope', '$http', '$location', '$rootScope', 'uploadPhotoFactory', '$upload',
+                            function (dataFactory, localStorageService, Coffee, $scope, $http, $location, $rootScope, uploadPhotoFactory, $upload) {
 
     $scope.coffee = {};
+    var vm = this;
 
     //Foursquare API
     dataFactory.getData(function (items) {
@@ -28,19 +30,47 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
         Coffee.deleteCoffee({id: id});
     }
 
-    ////DELETE 2
-    //$scope.deleteCoffee = function () {
-    //    $http.post('api/Coffee', $scope.coffee)
-    //    $scope.drinks.splice(index, 1);
-    //}
+    vm.uploadFile = function () {
+        console.log('up')
+        upload.uploadPhoto(file, $rootScope, coffeeId);
+    };
 
-    //$scope.deleteCoffee = function (coffee) {
-    //    coffee.remove(); {
- 
-    //    };
-    //}
+    vm.uploadPhoto = function (coffeeId, cb) {
+        var file = $scope.coffee.imagePath[0];
+        $upload.upload({
+            url: 'https://buzzhub.s3.amazonaws.com/dotnetimages',
+            method: 'POST',
+            data: {
+                'Content-Type': file.type,
+                key: $scope.$parent.coffeeId + '/' + file.name,
+                acl: 'public-read',
+                awsaccesskeyid: 'AKIAJZ42ZVYZILDNSAJQ',
+                policy: 'eyJleHBpcmF0aW9uIjoiMjAyMC0wMS0wMVQwMDowMDowMFoiLCJjb25kaXRpb25zIjpbeyJidWNrZXQiOiJidXp6aHViIn0seyJhY2wiOiAicHVibGljLXJlYWQifSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl1dfQ==',
+                signature: 'zs/+bYf4kenwRdEtC1NfpNmv+ik=',
+                file: file
+                }
+            })
+               .success(function (data, status, headers, config) {
+                   var filelink = 'https://buzzhub.s3.amazonaws.com/dotnetimages' + coffeeId + '/' + config.file.name;
+                   cb(filelink)
+               })
+               .error(function (err) {
+                   console.log('s3 problem', err);
+               });
+        }
 
-                              
+        vm.fileSelected = function (files) {
+            _setThumbnail(files[0], function (base64) {
+                $scope.$parent.coffee.imagePath[0].dataUrl = base64;
+                $scope.$apply();
+            });
+        };
+
+        $('#uploadButton').on('click', function (e) {
+            e.preventDefault();
+            vm.uploadPhoto();
+        });
+                                  
 
   
 }]);

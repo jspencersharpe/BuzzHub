@@ -58,16 +58,17 @@
         <label>Image</label>
         <input class="form-control" ng-model="coffee.imagePath"/>
     </div>
-  <!--<div class="upload">
+  <div class="upload">
     <div class="thumbnail">
       <img class="img-rounded" ng-src="{{coffee.files[0].dataUrl || upload.imageUrl}}" onerror="this.src='http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image'">
     </div>
     <input type="file" name="file"
-      ng-model="coffee.files"
+      ng-model="coffee.imagePath"
       ng-file-select
       ng-file-change="upload.fileSelected($files)"
       accept="image/*">
-  </div>-->
+      <button id="uploadButton">Upload Photo</button>
+  </div>
       <button id="add-drink-button" class="btn btn-default btn-lg" type="submit">Add Drink</button>
 </form>
   </div>
