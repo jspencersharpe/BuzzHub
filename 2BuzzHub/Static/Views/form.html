@@ -2,13 +2,13 @@
 <div class="container container-fluid">
 <div class="row">  
       <h2 class="text">Coffee shops Near You</h2>
+    <p id="fsq">Fueled by <a href="https://foursquare.com/" target="_blank"><img id="foursquare" src="doc/foursquare.png" alt="foursquare"></a></p>
    <div class="col-md-5">
     <div class="shops-list">
       <ul>
           <li class="shops-found" ng-repeat="item in items" ng-click="coffee.shop=item">{{item}}</li>
       </ul>
     </div>
-    <p id="fsq">Fueled by <a href="https://foursquare.com/" target="_blank"><img id="foursquare" src="doc/foursquare.png" alt="foursquare"></a></p>
   </div>
   <div class="col-md-7">
   <div class="form-options">
@@ -56,20 +56,19 @@
   </div>
     <div>
         <label>Image</label>
-        <input class="form-control" ng-model="coffee.imagePath"/>
     </div>
   <div class="upload">
     <div class="thumbnail">
       <img class="img-rounded" ng-src="{{coffee.files[0].dataUrl || upload.imageUrl}}" onerror="this.src='http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image'">
     </div>
-    <input type="file" name="file"
+    <input class="form-control" type="file" name="file"
       ng-model="coffee.imagePath"
       ng-file-select
       ng-file-change="upload.fileSelected($files)"
       accept="image/*">
-      <button id="uploadButton">Upload Photo</button>
+      <button class="btn btn-default" id="uploadButton">Upload Photo</button>
   </div>
-      <button id="add-drink-button" class="btn btn-default btn-lg" type="submit">Add Drink</button>
+      <button class="btn btn-default" id="add-drink-button" class="btn btn-default btn-lg" type="submit">Add Drink</button>
 </form>
   </div>
 </div>
