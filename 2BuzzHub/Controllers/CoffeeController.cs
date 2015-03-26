@@ -19,6 +19,7 @@ namespace BuzzHub.Controllers
         private CoffeeRepository repo = new CoffeeRepository();
 
         //GET
+        [Authorize]
         [Route("api/Coffee")]
         [HttpGet]
         public IEnumerable<Coffee> Get() {
@@ -26,7 +27,7 @@ namespace BuzzHub.Controllers
         }
 
         // POST
-        //[Authorize]
+        [Authorize]
         [Route("api/Coffee")]
         [HttpPost]
         public HttpResponseMessage PostCoffee(Coffee coffee)

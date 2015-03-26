@@ -15,11 +15,11 @@
     </div>
     </div>
   <div class="col-md-4">
-<form class="new-drink" name="myForm" enctype="multipart/form-data" ng-submit="myForm.$valid && postCoffee()" validate>
-  <div class="form-group" ng-class=" {'has-error': !coffee.shop}" required>
-    <label>Shop</label>
-    <input class="form-control" id="current-shop" type="text" ng-model="coffee.shop" required>
-  </div>
+      <form class="new-drink" name="myForm" <!--ng-submit="myForm.$valid && postCoffee()"--> validate>
+  <div class=" form-group" ng-class=" {'has-error': !coffee.shop}" required>
+          <label>Shop</label>
+          <input class="form-control" id="current-shop" type="text" ng-model="coffee.shop" required>
+</div>
     <div class="form-group" ng-class="{'has-error': !coffee.drink}" required>
     <label>Drink</label>
         <!--<input type="text" class="form-control" ng-model="coffee.drink"/>-->
@@ -61,14 +61,15 @@
     <div class="thumbnail">
       <img class="img-rounded" ng-src="{{coffee.files[0].dataUrl || upload.imageUrl}}" onerror="this.src='http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image'">
     </div>
-    <input class="form-control" type="file" name="file"
-      ng-model="coffee.imagePath"
-      ng-file-select
-      ng-file-change="upload.fileSelected($files)"
-      accept="image/*">
-      <button class="btn btn-default" id="uploadButton">Upload Photo</button>
+      <input class="form-control" type="file" name="file"
+             ng-model="coffee.imagePath"
+             ng-file-select />
+             <!--ng-file-change="upload.fileSelected()"--> 
+             <!--accept="image/*"-->>
+      <input type="hidden" name="Authorization" value=""/>
+      <input type="button" class="btn btn-default" id="uploadButton">Upload Photo />
   </div>
-      <button class="btn btn-default" id="add-drink-button" class="btn btn-default btn-lg" type="submit">Add Drink</button>
+      <input type="submit" id="add-drink-button" class="btn btn-default btn-lg">Add Drink />
 </form>
   </div>
 </div>

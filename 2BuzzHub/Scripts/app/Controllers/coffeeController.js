@@ -35,23 +35,28 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
         upload.uploadPhoto(file, $rootScope, coffeeId);
     };
 
-    vm.uploadPhoto = function (coffeeId, cb) {
+    vm.uploadPhoto = function (cb) {
+        alert($scope.coffee.imagePath[0].name);
         var file = $scope.coffee.imagePath[0];
         $upload.upload({
-            url: 'https://buzzhub.s3.amazonaws.com/dotnetimages',
+            url: 'https://buzzhub.s3.amazonaws.com',
             method: 'POST',
             data: {
                 'Content-Type': file.type,
-                key: $scope.$parent.coffeeId + '/' + file.name,
+                key: 'dotnetimages/' + file.name,
                 acl: 'public-read',
-                awsaccesskeyid: 'AKIAJZ42ZVYZILDNSAJQ',
+                awsaccesskeyid: 'AKIAJZO3MXQYNUR5MGJQ',
                 policy: 'eyJleHBpcmF0aW9uIjoiMjAyMC0wMS0wMVQwMDowMDowMFoiLCJjb25kaXRpb25zIjpbeyJidWNrZXQiOiJidXp6aHViIn0seyJhY2wiOiAicHVibGljLXJlYWQifSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiIl1dfQ==',
-                signature: 'zs/+bYf4kenwRdEtC1NfpNmv+ik=',
+                signature: 'pT0seLTIFqiwuawmR++yCZbN/Q4=',
                 file: file
-                }
+            },
+            fields: {
+                key: 'dotnetimages/' + file.name
+            }
             })
                .success(function (data, status, headers, config) {
-                   var filelink = 'https://buzzhub.s3.amazonaws.com/dotnetimages' + coffeeId + '/' + config.file.name;
+                   var filelink = 'https://buzzhub.s3.amazonaws/dotnetimages' + '/' + config.file.name;
+                   console.log('success');
                    cb(filelink)
                })
                .error(function (err) {
@@ -61,13 +66,14 @@ app.controller('coffeeController', ['dataFactory', 'localStorageService', 'Coffe
 
         vm.fileSelected = function (files) {
             _setThumbnail(files[0], function (base64) {
-                $scope.$parent.coffee.imagePath[0].dataUrl = base64;
+                $scope.$parent.coffee.files[0].dataUrl = base64;
                 $scope.$apply();
             });
         };
 
         $('#uploadButton').on('click', function (e) {
             e.preventDefault();
+            e.stopPropagation();
             vm.uploadPhoto();
         });
                                   
