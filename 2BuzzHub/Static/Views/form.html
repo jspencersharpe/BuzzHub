@@ -15,7 +15,7 @@
     </div>
     </div>
   <div class="col-md-4">
-      <form class="new-drink" name="myForm" <!--ng-submit="myForm.$valid && postCoffee()"--> validate>
+      <form class="new-drink" name="myForm" ng-submit="myForm.$valid && postCoffee()"> 
   <div class=" form-group" ng-class=" {'has-error': !coffee.shop}" required>
           <label>Shop</label>
           <input class="form-control" id="current-shop" type="text" ng-model="coffee.shop" required>
@@ -63,13 +63,12 @@
     </div>
       <input class="form-control" type="file" name="file"
              ng-model="coffee.imagePath"
-             ng-file-select />
-             <!--ng-file-change="upload.fileSelected()"--> 
-             <!--accept="image/*"-->>
+             ng-file-select 
+             ng-file-change="coffee.fileSelected($event)" />
       <input type="hidden" name="Authorization" value=""/>
-      <input type="button" class="btn btn-default" id="uploadButton">Upload Photo />
+      <input type="button" class="btn btn-default" id="uploadButton" value="Upload Photo">
   </div>
-      <input type="submit" id="add-drink-button" class="btn btn-default btn-lg">Add Drink />
+      <input type="submit" id="add-drink-button" class="btn btn-default btn-lg" value="Add Drink">
 </form>
   </div>
 </div>
