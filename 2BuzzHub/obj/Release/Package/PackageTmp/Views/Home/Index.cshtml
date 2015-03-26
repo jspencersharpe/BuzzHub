@@ -6,6 +6,7 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
     <link href="~/Content/loading-bar.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
@@ -19,26 +20,25 @@
             </div>
             <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
                 <ul class="nav navbar-nav navbar-right">
-                    <li data-ng-hide="authentication.isAuth"><a href="#">Welcome {{authentication.userName}}</a></li>
-                    <li data-ng-hide="authentication.isAuth"><a href="#/form">New Drink</a></li>
-                    <li data-ng-hide="authentication.isAuth"><a href="#/table">My Drinks</a></li>
-                    <li data-ng-hide="authentication.isAuth"><a href="" data-ng-click="logOut()">Logout</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/login">Login</a></li>
-                    <li data-ng-hide="authentication.isAuth"> <a href="#/register">Sign Up</a></li>
+                    <li data-ng-hide="authentication.isAuth"><a ng-if="auth" href="#/form">New Drink</a></li>
+                    <li data-ng-hide="authentication.isAuth"><a ng-if="auth" href="#/table">My Drinks</a></li>
+                    <li data-ng-hide="authentication.isAuth"><a ng-if="auth" href="" data-ng-click="logout()">Logout</a></li>
+                    <li><a ng-if="!auth" href="#/login">Login</a></li>
+                    <li><a ng-if="!auth" href="#/register">Sign Up</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="jumbotron">
         <div class="container">
-            <div class="page-header text-center">
-                <h1>BuzzHub</h1>
+            <div class="page-header text-left">
+                <h1 class="text"><span><img id="logo" src="doc/buzzhub.png" /></span>BuzzHub</h1>
             </div>
-            <p>Get your buzz on.</p>
+            <h2 id="catchphrase">Get your buzz on.</h2>
         </div>
     </div>    
     <div class="container">
-        <div data-ng-view="">
+        <div data-ng-view>
         </div>
     </div>
     <hr />
@@ -58,7 +58,7 @@
     <script src="~/Scripts/angular-route.min.js"></script>
     <script src="~/Scripts/loading-bar.min.js"></script>
     <script src="~/Scripts/angular-file-upload.js"></script>
-    <script src="~/Scripts/angular-file-upload-shim.min.js"></script>
+    <script src="~/Scripts/angular-file-upload-shim.js"></script>
     <script src="~/Scripts/angular-resource.js"></script>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/underscore.js"></script>

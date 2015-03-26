@@ -1,0 +1,57 @@
+﻿/*Nav*/
+div.navbar-inverse {
+    background-color: #e48632;
+    border-color: #e48632;
+}
+.navbar-inverse
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+/*Text*/
+h1.text, h2.text {
+    color: #6f5a40;
+}
+
+h1.text {
+    font-weight: bold;
+    font-size: 4em;
+}
+
+#logo {
+    max-width: 200px;
+}
+
+#catchphrase {
+    text-align: right;
+}
+
+.shops-list {
+    background-color: rgba(228, 134, 50, .8);
+    max-height: 600px;
+    overflow: auto;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.shops-list::-webkit-scrollbar { 
+    display: none; 
+}
+
+.shops-found {
+    list-style-type: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#foursquare {
+    max-width: 200px;
+}
+
+.my-coffee {
+    max-width: 80px;
+}

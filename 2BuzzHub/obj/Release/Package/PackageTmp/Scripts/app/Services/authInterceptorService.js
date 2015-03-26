@@ -3,7 +3,7 @@ angular.module('buzzHub')
 app.factory('authInterceptorService', ['$location', '$q', 'localStorageService',
                               function ($location, $q, localStorageService) {
 
-    return {
+                                  return {
         request: function(config){
                         config.headers = config.headers || {};
                         console.log(config);

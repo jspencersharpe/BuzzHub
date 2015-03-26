@@ -71,3 +71,4 @@ c:\users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub\
 c:\users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub\obj\Release\2BuzzHub.csproj.GenerateResource.Cache
 c:\users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub\obj\Release\2BuzzHub.dll
 c:\users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub\obj\Release\2BuzzHub.pdb
+c:\users\jspencersharpe\documents\visual studio 2013\Projects\2BuzzHub\2BuzzHub\obj\Release\2BuzzHub.csprojResolveAssemblyReference.cache

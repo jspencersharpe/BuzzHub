@@ -3,6 +3,9 @@
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-2BuzzHub-20150321103508.mdf;Initial Catalog=aspnet-2BuzzHub-20150321103508;Integrated Security=True" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="c:\\users\\jspencersharpe\\documents\\visual\ studio\ 2013\\Projects\\2BuzzHub\\2BuzzHub\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
+  <parameter name="_2BuzzHub.Properties.Settings.StorageConnectionString-Web.config Connection String" description="_2BuzzHub.Properties.Settings.StorageConnectionString Connection String used in web.config by the application to access the database." defaultValue="UseDevelopmentStorage=true" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="c:\\users\\jspencersharpe\\documents\\visual\ studio\ 2013\\Projects\\2BuzzHub\\2BuzzHub\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='_2BuzzHub.Properties.Settings.StorageConnectionString']/@connectionString" />
+  </parameter>
   <parameter name="BuzzHub.CoffeeContext-Web.config Connection String" description="BuzzHub.CoffeeContext Connection String used in web.config by the application to access the database." defaultValue="BuzzHub.CoffeeContext_ConnectionString" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="c:\\users\\jspencersharpe\\documents\\visual\ studio\ 2013\\Projects\\2BuzzHub\\2BuzzHub\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BuzzHub.CoffeeContext']/@connectionString" />
   </parameter>

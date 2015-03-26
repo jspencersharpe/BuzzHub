@@ -1,12 +1,14 @@
 ﻿'use strict';
 angular.module('buzzHub')
-app.controller('indexController', ['$scope', '$location', 'authService', function ($scope, $location, authService) {
+app.controller('indexController', ['$rootScope', 'localStorageService', '$scope', '$location', 'authService', function ($rootScope, localStorageService, $scope, $location, authService) {
 
-    $scope.logOut = function () {
-        authService.logOut();
-        $location.path('/home');
+    $scope.logout = function () {
+        $rootScope.auth = null;
+        localStorageService.remove('auth');
+        //authService.logout();
+        $location.path('/login');
     }
 
-    $scope.authentication = authService.authentication;
+    //$scope.authentication = authService.authentication;
 
 }]);

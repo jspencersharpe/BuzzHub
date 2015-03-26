@@ -1039,13 +1039,10 @@
     <Content Include="Scripts\app\Controllers\indexController.js" />
     <Content Include="Scripts\app\Controllers\loginController.js" />
     <Content Include="Scripts\app\Controllers\signupController.js" />
-    <Content Include="Scripts\app\Controllers\uploadController.js" />
     <Content Include="Scripts\app\data.js" />
-    <Content Include="Scripts\app\drinks\drink.config.js" />
     <Content Include="Scripts\app\Factories\coffeeFactory.js" />
     <Content Include="Scripts\app\Services\authInterceptorService.js" />
     <Content Include="Scripts\app\Services\authService.js" />
-    <Content Include="Scripts\app\Services\coffeeService.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
