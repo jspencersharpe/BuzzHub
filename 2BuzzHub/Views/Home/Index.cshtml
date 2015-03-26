@@ -6,6 +6,7 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
     <link href="~/Content/loading-bar.css" rel="stylesheet" />
+    <link href="~/Content/main.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
@@ -30,14 +31,14 @@
     </div>
     <div class="jumbotron">
         <div class="container">
-            <div class="page-header text-center">
-                <h1>BuzzHub</h1>
+            <div class="page-header text-left">
+                <h1 class="text"><span><img id="logo" src="doc/buzzhub.png" /></span>BuzzHub</h1>
             </div>
-            <p>Get your buzz on.</p>
+            <p id="catchphrase">Get your buzz on.</p>
         </div>
     </div>    
     <div class="container">
-        <div data-ng-view="">
+        <div data-ng-view>
         </div>
     </div>
     <hr />

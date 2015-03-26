@@ -1,0 +1,36 @@
+﻿/*Nav*/
+div.navbar-inverse {
+    background-color: #e48632;
+    border-color: #e48632;
+}
+.navbar-inverse
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+/*Text*/
+h1.text, h2.text {
+    color: #6f5a40;
+}
+
+#logo {
+    max-width: 200px;
+}
+
+#catchphrase {
+    text-align: right;
+}
+
+.shops-list {
+    background-color: rgba(228, 134, 50, .8);
+}
+
+.shops-found {
+    list-style-type: none;
+    color: #fff;
+    font-size: large;
+}
