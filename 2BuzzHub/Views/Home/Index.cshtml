@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
+    <header ng-include="'/Static/Views/header.html'"></header>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" data-ng-controller="indexController">
         <div class="container">
             <div class="navbar-header">
@@ -18,32 +19,23 @@
                 </button>
                 <a class="navbar-brand" href="#/">Home</a>
             </div>
-            <div class="collapse navbar-collapse" data-collapse="!navbarExpanded">
-                <ul class="nav navbar-nav navbar-right">
-                    <li data-ng-hide="authentication.isAuth"><a ng-if="auth" href="#/form">New Drink</a></li>
-                    <li data-ng-hide="authentication.isAuth"><a ng-if="auth" href="#/table">My Drinks</a></li>
-                    <li data-ng-hide="authentication.isAuth"><a ng-if="auth" href="" data-ng-click="logout()">Logout</a></li>
-                    <li><a ng-if="!auth" href="#/login">Login</a></li>
-                    <li><a ng-if="!auth" href="#/register">Sign Up</a></li>
-                </ul>
-            </div>
+
         </div>
     </div>
     <div class="jumbotron">
-        <div class="container">
+        <div>
             <div class="page-header text-left">
                 <h1 class="text"><span><img id="logo" src="doc/buzzhub.png" /></span>BuzzHub</h1>
             </div>
-            <h2 id="catchphrase">Get your buzz on.</h2>
         </div>
     </div>    
-    <div class="container">
+    <div>
         <div data-ng-view>
         </div>
     </div>
     <hr />
     <div id="footer">
-        <div class="container">
+        <div>
             <div class="row">
                 <div class="col-md-6">
                 </div>
@@ -62,6 +54,7 @@
     <script src="~/Scripts/angular-resource.js"></script>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <script src="~/Scripts/underscore.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
     <!-- Load app main script -->
     <script src="~/Scripts/app/app.js"></script>
     <script src="~/Scripts/app/data.js"></script>
@@ -74,6 +67,7 @@
     <script src="~/Scripts/app/Controllers/loginController.js"></script>
     <script src="~/Scripts/app/Controllers/signupController.js"></script>
     <script src="~/Scripts/app/Controllers/coffeeController.js"></script>
+    <script src="~/Scripts/app/Controllers/headerController.js"></script>
     <!-- Load factories-->
     <script src="~/Scripts/app/Factories/coffeeFactory.js"></script>
 </body>

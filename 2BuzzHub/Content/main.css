@@ -13,13 +13,17 @@ div.navbar-inverse {
 }
 
 /*Text*/
-h1.text, h2.text {
+h1.text, h2.text, a, td {
     color: #6f5a40;
 }
 
 h1.text {
     font-weight: bold;
     font-size: 4em;
+}
+
+a {
+    font-size: 1.3em;
 }
 
 #logo {
@@ -54,4 +58,13 @@ h1.text {
 
 .my-coffee {
     max-width: 80px;
+}
+
+.jumbotron {
+    max-height: 320px;
+}
+
+#add-drink-button {
+    background-color: rgba(228, 134, 50, .8);
+    margin-top: 20px;
 }

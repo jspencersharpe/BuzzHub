@@ -20,7 +20,6 @@
         //POST
 
         $scope.postCoffee = function () {
-            alert('fired');
             $http.post('api/Coffee', $scope.coffee)
             .catch(function (error) {
                 console.log(error);
@@ -41,6 +40,7 @@
 
         vm.uploadFile = function () {
             console.log('up')
+            alert('image added!');
             var file = $scope.coffee.imagePath[0];
             uploadPhotoFactory.uploadPhoto(file, function (filelink) {
                 $scope.coffee.imagePath = filelink;

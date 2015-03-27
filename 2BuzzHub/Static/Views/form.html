@@ -26,6 +26,7 @@
     <select class="form-control" ng-model="coffee.drink">
         <option>coffee</option>
         <option>espresso</option>
+        <option>americano</option>
         <option>latte</option>
         <option>cappuccino</option>
         <option>macchiato</option>
@@ -47,17 +48,12 @@
     <label>Comment</label>
     <input class="form-control" maxlength="50" type="text" ng-model="coffee.comment">
   </div>
-    <div>
-        <label>Image</label>
-    </div>
   <div class="upload">
-    <div class="thumbnail">
+      <label>Image</label>
       <img class="img-rounded" ng-src="{{coffee.files[0].dataUrl || upload.imageUrl}}" onerror="this.src='http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image'">
-    </div>
       <input class="form-control" type="file" name="file"
              ng-model="coffee.imagePath"
              ng-file-select />
-      <input type="hidden" name="Authorization" value=""/>
       <input type="button" class="btn btn-default" id="uploadButton" value="Upload Photo">
   </div>
       <input type="submit" id="add-drink-button" class="btn btn-default btn-lg" value="Add Drink">

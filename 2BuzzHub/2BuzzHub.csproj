@@ -286,6 +286,7 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app\Controllers\headerController.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -1096,6 +1097,7 @@
     <Content Include="Scripts\underscore.js" />
     <Content Include="Scripts\underscore.min.js" />
     <Content Include="Static\Views\form.html" />
+    <Content Include="Static\Views\header.html" />
     <Content Include="Static\Views\home.html" />
     <Content Include="Static\Views\landing.html" />
     <Content Include="Static\Views\login.html" />
