@@ -25,6 +25,14 @@ namespace BuzzHub.Controllers
             return repo.All();
         }
 
+        //GET by id
+        [Route("api/Coffee/{id}")]
+        [HttpGet]
+        public Coffee GetById(int id) 
+        {
+            return repo.GetById(id);
+        }
+
         // POST
         [Route("api/Coffee")]
         [HttpPost]

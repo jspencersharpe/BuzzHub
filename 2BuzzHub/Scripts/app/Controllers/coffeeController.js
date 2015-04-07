@@ -26,9 +26,12 @@
             })
         };
 
+        //DELETE
         $scope.deleteCoffee = function (id) {
-
-            Coffee.deleteCoffee({ id: id });
+            $http.delete('api/Coffee/' + id)
+            .catch(function (error) {
+                console.log(error);
+            })
         }
 
         vm.fileSelected = function (files) {
