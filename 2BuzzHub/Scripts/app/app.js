@@ -1,4 +1,4 @@
-﻿var app = angular.module('buzzHub', ['ngRoute', 'ngResource', 'angularFileUpload', 'LocalStorageModule', 'angular-loading-bar']);
+﻿var app = angular.module('buzzHub', ['ngRoute', 'ngResource', 'ngAnimate', 'angularFileUpload', 'LocalStorageModule', 'angular-loading-bar']);
 
 app.config(function ($routeProvider) {
 
@@ -33,8 +33,6 @@ app.config(function ($routeProvider) {
         //$httpProvider.interceptors.push('authInterceptorService');
     });
 
-    $(function () {
-        $("anim").change(function () {
-            $("datepicker").datepicker("options", "showAnim", $(this).val());
-        });
-    });
+   
+
+
