@@ -33,4 +33,8 @@ app.config(function ($routeProvider) {
         //$httpProvider.interceptors.push('authInterceptorService');
     });
 
-
+    $(function () {
+        $("anim").change(function () {
+            $("datepicker").datepicker("options", "showAnim", $(this).val());
+        });
+    });
