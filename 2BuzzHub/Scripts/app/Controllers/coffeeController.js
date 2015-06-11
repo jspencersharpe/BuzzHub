@@ -27,10 +27,10 @@
         };
 
         //DELETE
-        $scope.deleteCoffee = function (id) {
-            $http.delete('api/Coffee/' + id)
-            .catch(function (error) {
-                console.log(error);
+
+        vm.removeCoffee = function (id) {
+            coffeeFactory.deleteCoffee(coffeeId, function () {
+                delete vm.coffees[coffeeId];
             })
         }
 

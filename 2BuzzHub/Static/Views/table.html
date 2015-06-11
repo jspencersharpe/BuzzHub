@@ -19,7 +19,7 @@
     <td class="comment">{{coffee.Comment}}</td>
     <td><img class="my-coffee" ng-src="{{coffee.ImagePath}}" onerror="this.src='http://www.clker.com/cliparts/p/5/i/r/k/8/coffee-cup-hi.png'"></td>
     <td class="buttons">
-        <button class="btn btn-danger" ng-click="deleteCoffee(coffee.ID)">Delete</button>
+        <button class="btn btn-danger" ng-click="removeCoffee(coffeeId)">Delete</button>
     </td>
     </tr>
   </tbody>
